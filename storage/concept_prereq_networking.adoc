@@ -1,0 +1,24 @@
+---
+permalink: storage/concept_prereq_networking.html 
+sidebar: sidebar 
+keywords: 'network setup, setup network, switch requirements, port requirements, network," "networking," "set up network," "prerequisites," "requirements' 
+summary: SolidFire システムのネットワークセットアップは、スイッチとポートの要件で構成されます。これらの実装方法はシステムによって異なります。 
+---
+= ネットワーク
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SolidFire システムのネットワークセットアップは、スイッチとポートの要件で構成されます。これらの実装方法はシステムによって異なります。
+
+
+
+== 詳細情報
+
+* link:../storage/concept_prereq_switch_configuration_for_solidfire_clusters.html["Element ソフトウェアを実行するクラスタのスイッチ設定"]
+* link:../storage/reference_prereq_network_port_requirements.html["ネットワークポートの要件"]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

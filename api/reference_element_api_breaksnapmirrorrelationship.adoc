@@ -1,0 +1,81 @@
+---
+permalink: api/reference_element_api_breaksnapmirrorrelationship.html 
+sidebar: sidebar 
+keywords: SnapMirror,volume,volumes,break,breaking,relationship,ONTAP 
+summary: Element Web UI では、 SnapMirror 関係を解除するために BreakSnapMirrorRelationship メソッドを使用します。SnapMirror 関係を解除すると、デスティネーションボリュームが独立して読み書き可能になり、ソースボリュームとは切り離して使用できるようになります。ResyncSnapMirrorRelationship API メソッドを使用して関係を再確立できます。このメソッドを使用するには、 ONTAP クラスタが使用可能である必要があります。 
+---
+= BreakSnapMirror 関係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Element Web UIは、メソッドを使用し `BreakSnapMirrorRelationship`て、SnapMirror関係を解除します。SnapMirror 関係を解除すると、デスティネーションボリュームが独立して読み書き可能になり、ソースボリュームとは切り離して使用できるようになります。APIメソッドを使用すると、関係を再確立できます `ResyncSnapMirrorRelationship`。このメソッドを使用するには、 ONTAP クラスタが使用可能である必要があります。
+
+
+
+== パラメータ
+
+このメソッドの入力パラメータは次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ | デフォルト値 | 必須 
+
+
+ a| 
+snapMirrorEndpointID
+ a| 
+Element ストレージクラスタと通信するリモート ONTAP ストレージシステムのエンドポイント ID 。
+ a| 
+整数
+ a| 
+なし
+ a| 
+はい
+
+
+
+ a| 
+デスティネーションボリューム
+ a| 
+SnapMirror 関係のデスティネーションボリューム。
+ a| 
+xref:reference_element_api_snapmirrorvolumeinfo.adoc[snapMirrorVolumeInfo]
+ a| 
+なし
+ a| 
+はい
+
+|===
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+
+
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+snapMirrorRelationship のこと
+ a| 
+解除された SnapMirror 関係の情報を含むオブジェクト。
+ a| 
+xref:reference_element_api_snapmirrorrelationship.adoc[snapMirrorRelationship のこと]
+
+|===
+
+
+== 新規導入バージョン
+
+10.1
+
+
+
+== 詳細情報
+
+xref:reference_element_api_breaksnapmirrorvolume.adoc[BreakSnapMirrorVolume]

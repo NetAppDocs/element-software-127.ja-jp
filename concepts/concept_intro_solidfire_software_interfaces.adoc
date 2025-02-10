@@ -1,0 +1,122 @@
+---
+permalink: concepts/concept_intro_solidfire_software_interfaces.html 
+sidebar: sidebar 
+keywords: interfaces, integration, user interface, Plug-in, vCenter, API, node UIs, command line, snapshots, shadow copies, Element software, Element, Element UI, UI, manage storage, utilities, integration utilities 
+summary: NetApp Element ストレージシステムは、 SolidFire のソフトウェアインターフェイスと統合ユーティリティを使用して管理できます。 
+---
+= SolidFire ソフトウェアインターフェイス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SolidFire ストレージシステムは、 NetApp Element の各種ソフトウェアインターフェイスや統合ユーティリティを使用して管理できます。
+
+.オプション
+* <<NetApp Element ソフトウェアのユーザインターフェイス>>
+* <<NetApp Element ソフトウェア API>>
+* <<vCenter Server 向け NetApp Element プラグイン>>
+* <<NetAppハイブリッドクラウドコントロール>>
+* <<管理ノード UI>>
+* <<その他の統合ユーティリティおよびツール>>
+
+
+
+
+== NetApp Element ソフトウェアのユーザインターフェイス
+
+Element ストレージをセットアップし、クラスタの容量とパフォーマンスを監視できるほか、マルチテナントインフラ全体のストレージアクティビティを管理できます。Element は、 SolidFire クラスタの中核をなすストレージオペレーティングシステムです。Element ソフトウェアはクラスタ内のすべてのノードで独立して動作します。 Element では、クラスタのノードが、単一のストレージシステムとして提供されるリソースを外部クライアントに結合することができます。Element ソフトウェアは、システム全体のすべてのクラスタの調整、拡張、管理を担います。ソフトウェアのインターフェイスは Element API を基盤としています。
+
+link:../storage/index.html["Element ソフトウェアでストレージを管理"]
+
+
+
+== NetApp Element ソフトウェア API
+
+一連のオブジェクト、メソッド、ルーチンを使用して Element ストレージを管理できます。Element API は、 HTTPS 経由の JSON-RPC プロトコルに基づいています。Element UI で API 処理を監視するには、 API ログを有効にします。これにより、システムに対して実行されているメソッドを確認できます。要求と応答の両方を有効にすると、実行したメソッドに対するシステムの応答を確認できます。
+
+link:../api/index.html["Element API を使用してストレージを管理します"]
+
+
+
+== vCenter Server 向け NetApp Element プラグイン
+
+VMware vSphere で Element UI の代わりのインターフェイスを使用して、 Element ソフトウェアを実行するストレージクラスタを設定および管理できます。
+
+https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+
+
+
+== NetAppハイブリッドクラウドコントロール
+
+NetApp Hybrid Cloud Control インターフェイスを使用して、 Element ストレージサービスと管理サービスをアップグレードし、ストレージアセットを管理できます。
+
+link:../hccstorage/index.html["NetApp Hybrid Cloud Control の概要を使用してストレージを管理および監視します"]
+
+
+
+== 管理ノード UI
+
+管理ノードには 2 つの UI が装備されています。 REST ベースのサービスを管理するための UI と、ネットワーク / クラスタ設定の管理とオペレーティングシステムのテスト / ユーティリティを実行するためのノード UI です。REST API UI からは、サービスベースのシステム機能を管理ノードから制御するサービス関連 API のメニューにアクセスできます。
+
+
+
+== その他の統合ユーティリティおよびツール
+
+通常は NetApp Element 、 NetApp Element API 、および NetApp Element Plug-in for vCenter Server を使用してストレージを管理しますが、追加の統合ユーティリティやツールを使用してストレージにアクセスできます。
+
+
+
+=== Element の CLI
+
+https://mysupport.netapp.com/site/tools/tool-eula/elem-cli["Element の CLI"^]Element APIを使用せずに、コマンドラインインターフェイスを使用してSolidFireストレージシステムを制御できます。
+
+
+
+=== Element PowerShell ツール
+
+https://mysupport.netapp.com/site/tools/tool-eula/elem-powershell-tools["Element PowerShell ツール"^]Element APIを使用してSolidFireストレージシステムを管理する一連のMicrosoft Windows PowerShell機能を使用できます。
+
+
+
+=== Element SDK
+
+https://mysupport.netapp.com/site/products/all/details/netapphci-solidfire-elementsoftware/tools-tab["Element SDK"^]では、次のツールを使用してSolidFireクラスタを管理できます。
+
+* Element Java SDK ： Element API と Java プログラミング言語を統合できます。
+* Element .NET SDK ： Element API を .NET プログラミングプラットフォームに統合できます。
+* Element Python SDK ： Element API と Python プログラミング言語を統合できます。
+
+
+
+
+=== SolidFire Postman API テストスイート
+
+Element API呼び出しをテストする一連の関数を使用できますlink:https://github.com/solidfire/postman["ポストマン"^]。
+
+
+
+=== SolidFire ストレージレプリケーションアダプタ
+
+https://mysupport.netapp.com/site/products/all/details/elementsra/downloads-tab["SolidFire ストレージレプリケーションアダプタ"^]VMware Site Recovery Manager（SRM）との統合により、レプリケートされたSolidFireストレージクラスタとの通信を可能にし、サポートされているワークフローを実行します。
+
+
+
+=== SolidFire vRO
+
+https://mysupport.netapp.com/site/products/all/details/solidfire-vro/downloads-tab["SolidFire vRO"^]Element APIを使用して、VMware vRealize OrchestratorでSolidFireストレージシステムを簡単に管理できます。
+
+
+
+=== SolidFire VSS プロバイダ
+
+https://mysupport.netapp.com/site/products/all/details/solidfire-vss-provider/downloads-tab["SolidFire VSS プロバイダ"^]VSSシャドウコピーをElement Snapshotおよびクローンと統合します。
+
+
+
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

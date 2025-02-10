@@ -1,0 +1,170 @@
+---
+sidebar: sidebar 
+permalink: upgrade/task_hcc_upgrade_management_node.html 
+summary: NetApp SolidFire ストレージシステムのアップグレードの一環として、管理ノードをアップグレードします。 
+keywords: netapp, cluster, management node, mNode, upgrade, 10, 11.0, 11.1, 11.3, 11.5, 11.7, 12.0, 12.2, 12.3, 12.3.1, 12.3.2, 12.3.x, 12.5, 12.7 
+---
+= 管理ノードをアップグレードします
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理ノードをバージョン12.3.x以降から管理ノード12.5以降にアップグレードできます。
+
+ストレージクラスタ上の Element ソフトウェアをアップグレードするために、管理ノードのオペレーティングシステムをアップグレードする必要がなくなりました。NetApp Hybrid Cloud Controlを使用してElementのアップグレードを実行するには、管理サービスを最新バージョンにアップグレードするだけです。管理ノードのオペレーティングシステムをアップグレードする理由がほかにもある場合は、セキュリティの修正など、管理ノードのアップグレード手順に従ってください。
+
+
+NOTE: 管理ノード12.2以前のアップグレードに関する情報が必要な場合は、を参照してください https://docs.netapp.com/us-en/element-software-123/upgrade/task_hcc_upgrade_management_node.html["Element 12.3.x管理ノードのアップグレードに関するドキュメント"^]。
+
+.アップグレードオプション
+次のいずれかのオプションを選択します。
+
+* <<バージョン12.3.x以降から管理ノードをバージョン12.5以降にアップグレードします>>
+* <<管理ノード REST API を使用して認証を再設定します>>
++
+このオプションは、管理サービスのバージョンが * シーケンシャル * 更新（ 1 ）であり、（ 2 ） Element ストレージのバージョンが既存の管理ノードを * 保持する場合に選択します。
+
+
+
+
+NOTE: 管理サービスと Element ストレージを順番に更新しないと、この手順で再認証を再設定することはできません。代わりに、該当するアップグレード手順を実行してください。
+
+
+
+== バージョン12.3.x以降から管理ノードをバージョン12.5以降にアップグレードします
+
+新しい管理ノード仮想マシンをプロビジョニングすることなく、バージョン12.3.x以降からバージョン12.5以降への管理ノードのインプレースアップグレードを実行できます。
+
+
+NOTE: Element 12.5以降の管理ノードはオプションのアップグレードです。既存の環境では必要ありません。
+
+.必要なもの
+* 管理ノード VM の RAM は 24GB です。
+* アップグレードする管理ノードのバージョンが 12.0 で、 IPv4 ネットワークを使用している。管理ノードバージョン12.5以降ではIPv6がサポートされません。
++
+
+TIP: 管理ノードのバージョンを確認するには、管理ノードにログインし、ログインバナーに表示される Element のバージョン番号を確認します。
+
+* NetApp Hybrid Cloud Control を使用して管理サービスバンドルを最新バージョンに更新しておきます。NetApp Hybrid Cloud Controlには次のIPからアクセスできます。 `\https://<ManagementNodeIP>`
+* 管理ノードをバージョン12.5以降に更新する場合は、管理サービス2.21.61以降が実行されます。
+* の手順に従って、追加のネットワークアダプタを設定しておきます（必要な場合）link:../mnode/task_mnode_install_add_storage_NIC.html["追加のストレージ NIC の設定"]。
++
+
+NOTE: eth0 を SVIP にルーティングできない場合は、永続ボリュームに追加のネットワークアダプタが必要になることがあります。永続ボリュームを設定できるように、 iSCSI ストレージネットワークに新しいネットワークアダプタを設定してください。
+
+* ストレージノードでElement 12.3.x以降が実行されています。
+
+
+.手順
+. SSH またはコンソールアクセスを使用して管理ノード仮想マシンにログインします。
+. NetAppサポートサイトから管理ノード仮想マシンにElementソフトウェアのをダウンロードします https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["管理ノード ISO"^]。
++
+
+NOTE: ISOの名前は次のようになります。 `solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. ダウンロードしたファイルに対して md5sum を実行し、その出力をNetApp Support Siteにある Element ソフトウェア用の ISO と比較することで、ダウンロードの整合性をチェックします。以下の例を参照してください。
++
+`sudo md5sum -b <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso`
+
+. 次のコマンドを使用して、管理ノードの ISO イメージをマウントし、ファイルシステムに内容をコピーします。
++
+[listing]
+----
+sudo mkdir -p /upgrade
+----
++
+[listing]
+----
+sudo mount <solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso> /mnt
+----
++
+[listing]
+----
+sudo cp -r /mnt/* /upgrade
+----
+. ホームディレクトリに移動し、次の場所からISOファイルをアンマウントし `/mnt`ます。
++
+[listing]
+----
+sudo umount /mnt
+----
+. 管理ノードのスペースを節約するために ISO を削除します。
++
+[listing]
+----
+sudo rm <path to iso>/solidfire-fdva-<Element release>-patchX-XX.X.X.XXXX.iso
+----
+. アップグレードする管理ノードで次のコマンドを実行して管理ノードの OS バージョンをアップグレードします。Active IQ コレクタやプロキシの設定など、必要な設定ファイルはすべてアップグレード後も保持されます。
++
+[listing]
+----
+sudo /sf/rtfi/bin/sfrtfi_inplace file:///upgrade/casper/filesystem.squashfs sf_upgrade=1
+----
++
+アップグレードプロセスが完了すると、管理ノードが新しい OS でリブートします。
+
++
+
+NOTE: この手順で説明した sudo コマンドを実行すると、 SSH セッションが強制終了されます。継続的な監視を行うには、コンソールアクセスが必要です。アップグレードの実行中にコンソールにアクセスできない場合は、 SSH ログインを再試行し、 15~30 分後に接続を確認します。ログイン後、アップグレードが正常に完了したことを示す SSH バナーで新しい OS バージョンを確認できます。
+
+. 管理ノードで、スクリプトを実行し `redeploy-mnode`て以前の管理サービスの設定を保持します。
++
+
+NOTE: 設定に応じて、 Active IQ コレクタサービス、コントローラ（ vCenter ）、プロキシなどの以前の管理サービスの設定が適用されます。
+
++
+[listing]
+----
+sudo /sf/packages/mnode/redeploy-mnode -mu <mnode user>
+----
+
+
+
+IMPORTANT: 管理ノードで以前にSSH機能を無効にしていた場合は、リカバリした管理ノードでを実行する必要がありlink:../mnode/task_mnode_ssh_management.html["SSH を再度無効にします"]ます。のSSH機能link:../mnode/task_mnode_enable_remote_support_connections.html["ネットアップサポートの Remote Support Tunnel （ RST ）セッションアクセス"]は、管理ノードではデフォルトで有効になっています。
+
+
+
+== 管理ノード REST API を使用して認証を再設定します
+
+既存の管理ノードは、（ 1 ）管理サービスと（ 2 ） Element ストレージを順番にアップグレードした場合でも維持できます。別のアップグレード順序を使用した場合は、インプレース管理ノードのアップグレード手順を参照してください。
+
+.開始する前に
+* 管理サービスをバージョン2.20.69以降に更新しておきます。
+* ストレージクラスタでElement 12.3以降が実行されている。
+* 管理サービスを順番に更新し、 Element ストレージをアップグレードしておきます。この手順を使用して認証を再設定するには、説明されている順序でアップグレードを完了する必要があります。
+
+
+.手順
+. 管理ノードで管理ノード REST API UI を開きます。
++
+[listing]
+----
+https://<ManagementNodeIP>/mnode
+----
+. 「 * Authorize * 」（認証）を選択して、次の手順を実行
++
+.. クラスタのユーザ名とパスワードを入力します。
+.. クライアントIDは、値がまだ入力されていない場合と同様に入力し `mnode-client`ます。
+.. セッションを開始するには、 * Authorize * を選択します。
+
+
+. REST API UI から、 * POST /services/reconfigure -auth* を選択します。
+. [* 試してみてください * ] を選択します。
+. load_images *パラメータにを選択します `true`。
+. [* Execute] を選択します。
++
+応答の本文は、再設定が正常に完了したことを示します。
+
+
+
+[discrete]
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

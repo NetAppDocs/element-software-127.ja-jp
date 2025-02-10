@@ -1,0 +1,147 @@
+---
+permalink: api/reference_element_api_modifyinitiators.html 
+sidebar: sidebar 
+keywords: modify,modifying,edit,editing,change,changing,initiators,initiator,attribute,attributes,modifyinitiators 
+summary: ModifyInitiators メソッドを使用すると、 1 つ以上の既存のイニシエータの属性を変更できます。 
+---
+= ModifyInitiators の実行に使用し
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、1つ以上の既存のイニシエータの属性を変更できます `ModifyInitiators`。
+
+既存のイニシエータの名前は変更できません。イニシエータの名前を変更する必要がある場合は、まずメソッドでそのイニシエータを削除し、メソッドで新しいイニシエータxref:reference_element_api_deleteinitiators.adoc[イニシエータを削除する]を作成しxref:reference_element_api_createinitiators.adoc[イニシエータを作成する]ます。
+
+パラメータで指定されたイニシエータのいずれかの変更に ModifyInitiators が失敗した場合、メソッドからエラーが返され、どのイニシエータも変更されません（一部だけを完了することはできません）。
+
+
+
+== パラメータ
+
+このメソッドの入力パラメータは次のとおりです。
+
+|===
+
+
+| 名前 | 製品説明 | タイプ | デフォルト値 | 必須 
+
+
+ a| 
+イニシエータ
+ a| 
+変更する各イニシエータの特性を含むオブジェクトのリスト。オブジェクトは次のとおりです。
+
+* `alias`：（オプション）イニシエータに割り当てる新しいフレンドリ名。文字列
+* `attributes`：（オプション）イニシエータに割り当てる一連の新しいJSON属性。（ JSON オブジェクト）。
+* `chapUsername`：（オプション）このイニシエータの新しい一意のCHAPユーザ名。文字列
+* `forceDuringUpgrade`：アップグレード中にイニシエータの変更を完了します。
+* `initiatorID`：（必須）変更するイニシエータのID。整数
+* `initiatorSecret`：（オプション）イニシエータの認証に使用する新しいCHAPシークレット。文字列
+* `requireChap`：（オプション）このイニシエータでCHAPを必須にする場合はTrueブール値
+* `targetSecret`：（オプション）ターゲットの認証に使用する新しいCHAPシークレット（相互CHAP認証を使用する場合）。文字列
+* `virtualNetworkIDs`：（オプション）このイニシエータに関連付けられている仮想ネットワーク識別子のリスト。仮想ネットワークを定義した場合、このイニシエータはそれらの仮想ネットワークにしかログインできません。仮想ネットワークを定義しない場合、このイニシエータはすべてのネットワークにログインできます。
+* `volumeAccessGroupID`：（オプション）イニシエータを追加するボリュームアクセスグループのID。イニシエータが以前は別のボリュームアクセスグループに属していた場合、以前のボリュームアクセスグループからは削除されます。このキーが存在するものの NULL の場合、イニシエータは現在のボリュームアクセスグループから削除されますが、新しいボリュームアクセスグループには配置されません。整数
+
+ a| 
+JSON オブジェクトの配列
+ a| 
+なし
+ a| 
+はい
+
+|===
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+
+
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+イニシエータ
+ a| 
+変更されたイニシエータの詳細を示すオブジェクトのリスト。
+ a| 
+xref:reference_element_api_initiator.adoc[イニシエータ]アレイ
+
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+  "id": 6683,
+  "method": "ModifyInitiators",
+  "params": {
+    "initiators": [
+      {
+        "initiatorID": 2,
+        "alias": "alias1",
+        "volumeAccessGroupID": null
+      },
+      {
+        "initiatorID": 3,
+        "alias": "alias2",
+        "volumeAccessGroupID": 1
+      }
+    ]
+  }
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+  "id": 6683,
+  "result": {
+    "initiators": [
+      {
+        "alias": "alias1",
+        "attributes": {},
+        "initiatorID": 2,
+        "initiatorName": "iqn.1993-08.org.debian:01:395543635",
+        "volumeAccessGroups": []
+      },
+      {
+        "alias": "alias2",
+        "attributes": {},
+        "initiatorID": 3,
+        "initiatorName": "iqn.1993-08.org.debian:01:935573135",
+        "volumeAccessGroups": [
+          1
+        ]
+      }
+    ]
+  }
+}
+----
+
+
+== 新規導入バージョン
+
+9.6
+
+
+
+== 詳細情報
+
+* xref:reference_element_api_createinitiators.adoc[イニシエータを作成する]
+* xref:reference_element_api_deleteinitiators.adoc[イニシエータを削除する]
+

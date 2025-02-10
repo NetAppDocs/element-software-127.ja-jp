@@ -1,0 +1,68 @@
+---
+permalink: api/reference_element_api_getsshinfo.html 
+sidebar: sidebar 
+keywords: SSH,status,get,getting,getsshinfo 
+summary: GetSshInfo メソッドを使用すると、 1 つのノードの SSH サービスのステータスを照会できます。 
+---
+= GetSshInfo の順にクリックします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、単一のノードのSSHサービスのステータスを照会できます `GetSshInfo`。
+
+
+
+== パラメータ
+
+このメソッドには入力パラメータはありません。
+
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+結果
+ a| 
+このノードの SSH サービスのステータス。
+ a| 
+ブーリアン
+
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+    "method" : "GetSshInfo",
+    "params" : {},
+    "id" : 1
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "enabled": false
+    }
+}
+----

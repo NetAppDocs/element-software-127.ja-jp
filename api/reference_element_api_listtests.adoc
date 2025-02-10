@@ -1,0 +1,84 @@
+---
+permalink: api/reference_element_api_listtests.html 
+sidebar: sidebar 
+keywords: test,tests,list,listing,listtests 
+summary: ListTests メソッドを使用すると、ノードで実行可能なテストをリストできます。 
+---
+= ListTests のように指定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、ノードで実行可能なテストをリストできます `ListTests`。
+
+
+
+== パラメータ
+
+このメソッドには入力パラメータはありません。
+
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+テスト
+ a| 
+ノードで実行できるテストのリスト。
+ a| 
+文字列の配列
+
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+   "method": "ListTests",
+   "params": {},
+   "id" : 1
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+  "id": 1,
+  "result": {
+   "tests": [
+             "TestConnectEnsemble",
+             "TestConnectMvip",
+             "TestConnectSvip",
+             "TestDrives",
+             "TestHardwareConfig",
+             "TestLocateCluster",
+             "TestPing",
+             "TestLocalConnectivity",
+             "TestRemoteConnectivity",
+             "TestNetworkConfig"
+           ]
+      }
+}
+----
+
+
+== 新規導入バージョン
+
+9.6

@@ -1,0 +1,37 @@
+---
+permalink: storage/task_system_manage_fips_check_the_fips_drive_status.html 
+sidebar: sidebar 
+keywords: fips, security, federal information processing standards, 140-2, drive, enable 
+summary: クラスタで FIPS ドライブ機能が有効になっているかどうかを確認するには、 NetApp Element ソフトウェアの GetFeatureStatus API メソッドを使用します。このメソッドで、 FIPS ドライブの有効ステータスが true であるか false であるかを確認できます。 
+---
+= FIPS ドライブのステータスを確認します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp ElementソフトウェアAPIメソッドを使用すると、FIPSドライブ機能がクラスタで有効になっているかどうかを確認できます。このメソッドは、FIPSドライブの有効ステータスがtrueまたはfalseになっているかを `GetFeatureStatus`示します。
+
+. Element API で次のように入力し、クラスタの FIPS ドライブ機能を確認します。
++
+`GetFeatureStatus`
+
+. API呼び出しの結果を確認します `GetFeatureStatus`。FIPS ドライブの有効な値が true であれば、 FIPS ドライブ機能が有効になっています。
++
+[listing]
+----
+{"enabled": true,
+"feature": "FipsDrives"
+}
+----
+
+
+
+
+== 詳細情報
+
+* link:../api/index.html["Element API を使用してストレージを管理します"]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

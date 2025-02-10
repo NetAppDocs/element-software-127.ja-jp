@@ -1,0 +1,36 @@
+= 詳細情報
+:allow-uri-read: 
+
+
+NetApp Element API を使用して、クラスタ内のストレージノードのデフォルト SSL 証明書と秘密鍵を変更できます。
+
+NetApp Element ソフトウェアクラスタを作成すると、一意の自己署名 Secure Sockets Layer （ SSL ）証明書と、 Element UI 、ノード UI 、またはノード API を介したすべての HTTPS 通信に使用される秘密鍵が作成されます。Element ソフトウェアは、自己署名証明書に加え、信頼できる認証局（ CA ）が発行して検証する証明書をサポートします。
+
+次の API メソッドを使用して、デフォルトの SSL 証明書に関する詳細情報を取得し、変更を加えることができます。
+
+* * GetSSLCertificate*
++
+を使用すると、現在インストールされているSSL証明書に関するすべての証明書の詳細を含む情報を取得できますlink:../api/reference_element_api_getsslcertificate.html["GetSSLCertificateメソッド"]。
+
+* * SetSSLCertificate*
++
+を使用して、クラスタおよびノード単位のSSL証明書を指定した証明書と秘密鍵に設定できますlink:../api/reference_element_api_setsslcertificate.html["SetSSLCertificateメソッド"]。証明書と秘密鍵はシステムで検証されるため、無効な証明書が適用されることはありません。
+
+* * RemoveSSLCertificate *
++
+は、link:../api/reference_element_api_removesslcertificate.html["RemoveSSLCertificateメソッド"]現在インストールされているSSL証明書と秘密鍵を削除します。そのあと、クラスタで新しい自己署名証明書と秘密鍵が生成されます。
+
+
+
+
+NOTE: クラスタの SSL 証明書は、クラスタに追加される新しいノードに自動的に適用されます。クラスタから削除したノードの証明書は自己署名証明書に戻され、ユーザが定義した証明書とキーの情報はすべてノードから削除されます。
+
+
+
+== 詳細情報
+
+* link:../mnode/reference_change_mnode_default_ssl_certificate.html["管理ノードのデフォルトSSL証明書を変更します"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Software/What_are_the_requirements_around_setting_custom_SSL_certificates_in_Element_Software%3F["Element SoftwareでのカスタムSSL証明書の設定に関する要件を教えてください。"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

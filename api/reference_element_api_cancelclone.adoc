@@ -1,0 +1,77 @@
+---
+permalink: api/reference_element_api_cancelclone.html 
+sidebar: sidebar 
+keywords:  
+summary: CancelClone メソッドを使用すると、実行中のボリュームクローンまたはボリュームコピーのプロセスを停止できます。グループクローン操作をキャンセルすると、システムは処理に関連付けられた asyncHandle を完了させ、削除します。 
+---
+= CancelClone
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、実行中のボリュームクローンまたはボリュームコピーのプロセスを停止できます `CancelClone`。グループクローン処理をキャンセルすると、処理に関連付けられた asyncHandle が完了して削除されます。
+
+
+
+== パラメータ
+
+このメソッドの入力パラメータは次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ | デフォルト値 | 必須 
+
+
+ a| 
+クローン ID
+ a| 
+進行中のクローンプロセスのクローン ID 。
+ a| 
+整数
+ a| 
+なし
+ a| 
+はい
+
+|===
+
+
+== 戻り値
+
+このメソッドには戻り値はありません。
+
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+   "method": "CancelClone",
+   "params": {
+      "cloneID" : 5,
+   },
+   "id" : 1
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+  "id" : 1,
+  "result" : {}
+}
+----
+
+
+== 新規導入バージョン
+
+9.6

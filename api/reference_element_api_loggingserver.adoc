@@ -1,0 +1,42 @@
+---
+permalink: api/reference_element_api_loggingserver.html 
+sidebar: sidebar 
+keywords: object,objects,loggingServer 
+summary: loggingServer オブジェクトには、ストレージクラスタに対して設定されたロギングホストの情報が含まれます。GetRemoteLoggingHosts を使用して現在のロギングホストを特定してから、 SetRemoteLoggingHosts を使用して現在のロギングホストに新しいロギングホストを加えたリストを設定できます。 
+---
+= loggingServer の場合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+loggingServer オブジェクトには、ストレージクラスタに対して設定されたロギングホストの情報が含まれます。を使用して現在のロギングホストを確認し、を使用して `SetRemoteLoggingHosts`現在のロギングホストと新しいロギングホストのリストを設定できます `GetRemoteLoggingHosts`。
+
+
+
+== オブジェクトメンバー
+
+このオブジェクトのメンバーは次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+ホスト
+ a| 
+ログサーバの IP アドレス。
+ a| 
+文字列
+
+
+
+ a| 
+ポート
+ a| 
+ログサーバとの通信に使用するポート番号。
+ a| 
+整数
+
+|===

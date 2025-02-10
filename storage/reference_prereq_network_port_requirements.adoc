@@ -1,0 +1,553 @@
+---
+permalink: storage/reference_prereq_network_port_requirements.html 
+sidebar: sidebar 
+keywords: network port requirements, TCP ports, firewall, utilities, URL, access attempt, ICMP, MIP, SIP, MVIP, SVIP 
+summary: システムをリモートで管理し、データセンターの外部のクライアントがリソースに接続できるようにするには、データセンターのエッジファイアウォールで次のTCPポートを許可する必要があります。システムの使用方法によっては、一部のポートは不要な場合もあります。 
+---
+= ネットワークポートの要件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+システムをリモートで管理し、データセンター外部のクライアントがリソースに接続できるようにするには、データセンターのエッジファイアウォールで次のTCPポートとUDPポートを許可する必要があります。システムの使用方法によっては、一部のポートは不要な場合もあります。
+
+特に記載がないかぎり、すべてのポートがTCPであり、NetAppサポートサーバ、管理ノード、およびElementソフトウェアを実行するノードの間の3ウェイハンドシェイク通信がすべてサポートされている必要があります。たとえば、管理ノードのソースのホストはTCPポート443を介してストレージクラスタのMVIPデスティネーションのホストと通信し、デスティネーションホストは任意のポートを介してソースホストと通信します。
+
+
+TIP: 管理ノード、 Element ソフトウェアを実行するノード、およびクラスタの MVIP の間で ICMP を有効にします。
+
+この表では次の略語を使用します。
+
+* mip ：管理 IP アドレス。ノードごとのアドレスです
+* sip ：ストレージ IP アドレス。ノードごとのアドレスです
+* MVIP ：管理仮想 IP アドレス
+* SVIP ：ストレージ仮想 IP アドレス
+
+
+[cols="25,25,15,35"]
+|===
+| ソース | デスティネーション | ポート | 製品説明 
+
+
+ a| 
+iSCSIクライアント
+ a| 
+ストレージクラスタのMVIP
+ a| 
+443
+ a| 
+（オプション） UI および API アクセス
+
+
+
+ a| 
+iSCSIクライアント
+ a| 
+ストレージクラスタのSVIP
+ a| 
+3260
+ a| 
+クライアント iSCSI 通信
+
+
+
+ a| 
+iSCSIクライアント
+ a| 
+ストレージノード SIP
+ a| 
+3260
+ a| 
+クライアント iSCSI 通信
+
+
+
+ a| 
+管理ノード
+ a| 
+`sfsupport.solidfire.com`
+ a| 
+22
+ a| 
+サポートアクセス用リバース SSH トンネル
+
+
+
+ a| 
+管理ノード
+ a| 
+ストレージノード MIP
+ a| 
+22
+ a| 
+サポート用 SSH アクセス
+
+
+
+ a| 
+管理ノード
+ a| 
+DNSサーバ
+ a| 
+53 TCP/UDP
+ a| 
+DNSルックアップ
+
+
+
+ a| 
+管理ノード
+ a| 
+ストレージノード MIP
+ a| 
+442
+ a| 
+ストレージノードおよび Element ソフトウェアへの UI および API アクセス アップグレード
+
+
+
+ a| 
+管理ノード
+ a| 
+ストレージクラスタのMVIP
+ a| 
+442
+ a| 
+ストレージノードおよび Element ソフトウェアへの UI および API アクセス アップグレード
+
+
+
+ a| 
+管理ノード
+ a| 
+`monitoring.solidfire.com`
+ a| 
+443
+ a| 
+Active IQ に報告するストレージクラスタ
+
+
+
+ a| 
+管理ノード
+ a| 
+ストレージクラスタのMVIP
+ a| 
+443
+ a| 
+ストレージノードおよび Element ソフトウェアへの UI および API アクセス アップグレード
+
+
+
+ a| 
+管理ノード
+ a| 
+repo.netapp.com
+ a| 
+443
+ a| 
+オンプレミス環境のインストール / 更新に必要なコンポーネントへのアクセスを提供します。
+
+
+
+| 管理ノード | ストレージノードのBMC / IPMI | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+ a| 
+管理ノード
+ a| 
+監視ノード
+ a| 
+9442
+ a| 
+ノード単位の設定 API サービス
+
+
+
+ a| 
+管理ノード
+ a| 
+vCenter Server
+ a| 
+9443
+ a| 
+vCenter Plug-in の登録。登録が完了したら、ポートを閉じることができます。
+
+
+
+ a| 
+SNMPサーバ
+ a| 
+ストレージクラスタのMVIP
+ a| 
+161 UDP
+ a| 
+SNMP ポーリング
+
+
+
+ a| 
+SNMPサーバ
+| ストレージノード MIP  a| 
+161 UDP
+ a| 
+SNMP ポーリング
+
+
+
+| ストレージノードのBMC / IPMI | 管理ノード | 623 UDP | RMCPポート。これはIPMI対応のシステムを管理するために必要です。 
+
+
+ a| 
+ストレージノード MIP
+ a| 
+DNSサーバ
+ a| 
+53 TCP/UDP
+ a| 
+DNSルックアップ
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+管理ノード
+ a| 
+80
+ a| 
+Element ソフトウェアのアップグレード
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+S3 / Swift エンドポイント
+ a| 
+80
+ a| 
+（オプション）バックアップとリカバリ用の S3 / Swift エンドポイントへの HTTP 通信
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+NTPサーバ
+ a| 
+123 UDP
+ a| 
+NTP
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+管理ノード
+ a| 
+162 UDP
+ a| 
+（任意） SNMP トラップ
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+SNMPサーバ
+ a| 
+162 UDP
+ a| 
+（任意） SNMP トラップ
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+LDAPサーバ
+ a| 
+389 TCP/UDP
+ a| 
+（任意） LDAP 検索
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+管理ノード
+ a| 
+443
+ a| 
+Element ストレージファームウェアのアップグレード
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+リモートストレージクラスタのMVIP
+ a| 
+443
+ a| 
+リモートレプリケーションのクラスタペアリング通信
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+リモートストレージノードのMIP
+ a| 
+443
+ a| 
+リモートレプリケーションのクラスタペアリング通信
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+S3 / Swift エンドポイント
+ a| 
+443
+ a| 
+（オプション）バックアップとリカバリ用の S3 / Swift エンドポイントへの HTTPS 通信
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+管理ノード
+ a| 
+514 TCP/UDP
+
+10514 TCP/UDP
+ a| 
+syslog 転送
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+syslogサアハ
+ a| 
+514 TCP/UDP
+
+10514 TCP/UDP
+ a| 
+syslog 転送
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+LDAPSサーバ
+ a| 
+636 TCP/UDP
+ a| 
+LDAPSルックアップ
+
+
+
+ a| 
+ストレージノード MIP
+ a| 
+リモートストレージノードのMIP
+ a| 
+2181
+ a| 
+リモートレプリケーション用のクラスタ間通信
+
+
+
+ a| 
+ストレージノード SIP
+ a| 
+リモートストレージノードのSIP
+ a| 
+2181
+ a| 
+リモートレプリケーション用のクラスタ間通信
+
+
+
+ a| 
+ストレージノード SIP
+ a| 
+ストレージノード SIP
+ a| 
+3260
+ a| 
+ノード間 iSCSI
+
+
+
+ a| 
+ストレージノード SIP
+ a| 
+リモートストレージノードのSIP
+ a| 
+4000～4020
+ a| 
+リモートレプリケーションのノード間のデータ転送
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+管理ノード
+ a| 
+442
+ a| 
+管理ノードへの HTTPS UI アクセス
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+ストレージノード MIP
+ a| 
+442
+ a| 
+ストレージノードへの HTTPS UI および API アクセス
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+管理ノード
+ a| 
+443
+ a| 
+管理ノードへの HTTPS UI および API アクセス
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+ストレージクラスタのMVIP
+ a| 
+443
+ a| 
+ストレージクラスタへの HTTPS UI および API アクセス
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+ストレージノードのベースボード管理コントローラ（BMC）/ Intelligent Platform Management Interface（IPMI）H410およびH600シリーズ
+ a| 
+443
+ a| 
+ノードリモート制御へのHTTPS UIおよびAPIアクセス
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+ストレージノード MIP
+ a| 
+443
+ a| 
+HTTPS によるストレージクラスタの作成、ストレージクラスタへの導入後の UI アクセス
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+ストレージノードBMC/IPMI H410およびH600シリーズ
+ a| 
+623 UDP
+ a| 
+Remote Management Control Protocolのポート。これはIPMI対応のシステムを管理するために必要です。
+
+
+
+ a| 
+システム管理者の PC
+ a| 
+監視ノード
+ a| 
+8080
+ a| 
+監視ノードのノード Web UI
+
+
+
+ a| 
+vCenter Server
+ a| 
+ストレージクラスタのMVIP
+ a| 
+443
+ a| 
+vCenter Plug-in の API アクセス
+
+
+
+ a| 
+vCenter Server
+ a| 
+リモートプラグイン
+ a| 
+8333
+ a| 
+Remote vCenter Plug-inサービス
+
+
+
+ a| 
+vCenter Server
+ a| 
+管理ノード
+ a| 
+8443
+ a| 
+（オプション） vCenter Plug-in の QoSSIOC サービス。
+
+
+
+ a| 
+vCenter Server
+ a| 
+ストレージクラスタのMVIP
+ a| 
+8444
+ a| 
+vCenter VASA プロバイダアクセス（ VVol のみ）
+
+
+
+ a| 
+vCenter Server
+ a| 
+管理ノード
+ a| 
+9443
+ a| 
+vCenter Plug-in の登録。登録が完了したら、ポートを閉じることができます。
+
+|===
+
+
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

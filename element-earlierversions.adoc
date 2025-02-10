@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: element-earlierversions.html 
+keywords: earlier versions, element versions 
+summary: 最新バージョンを実行していない場合は、以前のリリースのドキュメントを参照できます。 
+---
+= 以前のバージョンの SolidFire および NetApp Element ソフトウェアのマニュアル
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+以前のリリースのドキュメントは、NetApp Support Site で入手できます。
+
+* https://docs.netapp.com/us-en/element-software-125/index.html["Element 12.5のドキュメント"^]
+* https://docs.netapp.com/us-en/element-software-123/index.html["Element 12.3.xのドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63945&language=en-US["Element 12.2.1ドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63593&language=en-US["Element 12.2のドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63946&language=en-US["Element 12.0.1ドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63368&language=en-US["Element 12.0のドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=64187&language=en-US["Element 11.8.2ドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63944&language=en-US["Element 11.8.1ドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63293&language=en-US["Element 11.8のドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63138&language=en-US["Element 11.7のドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63207&language=en-US["Element 11.5.1ドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63058&language=en-US["Element 11.5のドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63027&language=en-US["Element 11.3P1のドキュメント"^]
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=63206&language=en-US["Element 11.3.2ドキュメント"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62654["Element 11.1のドキュメントおよびそれ以前のバージョン"^]
+
+
+
+
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

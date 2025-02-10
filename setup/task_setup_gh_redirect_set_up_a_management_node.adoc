@@ -1,0 +1,29 @@
+---
+permalink: setup/task_setup_gh_redirect_set_up_a_management_node.html 
+sidebar: sidebar 
+keywords: install management node,install mNode,install Active IQ,install AIQ 
+summary: NetApp Element ソフトウェア管理ノード（ mNode ）をインストールして、アップグレードやシステムサービスの提供、クラスタのアセットと設定の管理、システムテストとユーティリティの実行、ネットアップサポートへのアクセスをトラブルシューティングに利用できます。 
+---
+= 管理ノードをセットアップ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Element ソフトウェア管理ノード（ mNode ）をインストールして、アップグレードやシステムサービスの提供、クラスタのアセットと設定の管理、システムテストとユーティリティの実行、ネットアップサポートへのアクセスをトラブルシューティングに利用することができます。
+
+. のドキュメントを参照してくださいlink:../mnode/task_mnode_install.html["管理ノードをインストール"]。
++
+
+NOTE: Active IQをセットアップするには、セットアップスクリプトでパラメータを使用し `--telemetry_active`て、Active IQによる分析用のデータ収集を有効にします。
+
+
+
+
+
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
+

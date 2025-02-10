@@ -1,0 +1,37 @@
+---
+permalink: api/reference_element_api_volume_pairing_order_of_operations.html 
+sidebar: sidebar 
+keywords: volume,pairing,order,operations,volumes,pairing,pair,pairs 
+summary: ボリュームをペアリングする前に、 2 つのクラスタ間でクラスタペアを作成しておく必要があります。 
+---
+= ボリュームペアリングの処理の順序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームをペアリングする前に、 2 つのクラスタ間でクラスタペアを作成しておく必要があります。
+
+次の一連の API メソッドを使用して、クラスタ接続を確立します。
+
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing を参照してください]：
++
+ボリュームペアの作成に使用するボリュームペアリングキーを作成して返します。このキーには、ボリューム間の通信の確立に使用される情報が含まれています。
+
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]：
++
+APIメソッドで作成されたペアリングキーを使用してxref:reference_element_api_startvolumepairing.adoc[StartVolumePairing を参照してください]、ボリュームペアを作成します。volumeIDおよびvolumePairingKeyパラメータを使用してAPIメソッドをデスティネーションボリュームに対して発行しますxref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]。
+
+
+
+レプリケーションのターゲットボリュームとして特定できるのは、ペアボリュームの一方だけです。APIメソッドを使用しxref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair を使用します]てターゲットのボリュームを指定し、ボリュームのデータレプリケーションの方向を確立します。データはソースボリュームからターゲットボリュームにレプリケートされます。
+
+
+
+== 詳細情報
+
+* xref:reference_element_api_startvolumepairing.adoc[StartVolumePairing を参照してください]
+* xref:reference_element_api_completevolumepairing.adoc[CompleteVolumePairing]
+* xref:reference_element_api_modifyvolumepair.adoc[ModifyVolumePair を使用します]
+

@@ -1,0 +1,88 @@
+---
+permalink: api/reference_element_api_getsoftwareencryptionatrestinfo.html 
+sidebar: sidebar 
+keywords: system, api, security, get, getting, software encryption at rest 
+summary: GetSoftwareEncryptionAtRestInfo メソッドを使用すると、クラスタが保存データの暗号化に使用する情報を取得できます。 
+---
+= GetSoftwareEncryptionAtRestInfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、ソフトウェアで保存データの暗号化にクラスタで使用される保存データ暗号化情報を取得できます `GetSoftwareEncryptionAtRestInfo`。
+
+
+
+== パラメータ
+
+このメソッドには入力パラメータはありません。
+
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+[cols="4*"]
+|===
+| パラメータ | 製品説明 | タイプ | オプション 
+
+
+| masterKeyInfo の順に選択します | 現在のソフトウェア保存データ暗号化マスターキーに関する情報。 | EncryptionKeyInfo | 正しい 
+
+
+| rekeyMasterKeyAsyncResultID | 現在または最新のキー変更処理（存在する場合）の非同期結果ID（まだ削除されていない場合）。 `GetAsyncResult`出力には、新しいマスターキーに関する情報を含むフィールドと、 `keyToDecommission`古いキーに関する情報を含むフィールドが含まれ `newKey`ます。 | 整数 | 正しい 
+
+
+| 状態 | 現在のソフトウェアの保存データの暗号化状態。指定できる値は `disabled`、または `enabled`です。 | 文字列 | 正しくない 
+
+
+| バージョン | 保存データのソフトウェア暗号化が有効になるたびに増分されるバージョン番号。 | 整数 | 正しくない 
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+ "method": "getsoftwareencryptionatrestinfo"
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+        "masterKeyInfo": {
+            "keyCreatedTime": "2021-09-20T23:15:56Z",
+            "keyID": "4d80a629-a11b-40ab-8b30-d66dd5647cfd",
+            "keyManagementType": "internal"
+        },
+        "state": "enabled",
+        "version": 1
+    }
+}
+----
+
+
+== 新規導入バージョン
+
+12.3
+
+[discrete]
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["以前のバージョンの NetApp SolidFire 製品および Element 製品に関するドキュメント"^]
+

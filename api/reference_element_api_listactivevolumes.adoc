@@ -1,0 +1,111 @@
+---
+permalink: api/reference_element_api_listactivevolumes.html 
+sidebar: sidebar 
+keywords: active,volume,volumes,list,listing,listactivevolumes,cluster 
+summary: ListActiveVolumes メソッドを使用すると、現在システムにあるアクティブなボリュームのリストを取得できます。ボリュームのリストは、ボリューム ID 順にソートされます。複数のパート（ページ）に分けて取得することもできます。 
+---
+= ListActiveVolumes の場合
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、現在システムにあるアクティブボリュームのリストを取得できます `ListActiveVolumes`。ボリュームのリストは、ボリューム ID 順にソートされます。複数のパート（ページ）に分けて取得することもできます。
+
+
+
+== パラメータ
+
+このメソッドの入力パラメータは次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ | デフォルト値 | 必須 
+
+
+ a| 
+includeVirtualVolumes などです
+ a| 
+デフォルトでは仮想ボリュームは応答に含まれます。仮想ボリュームを除外するには、 false に設定します。
+ a| 
+ブーリアン
+ a| 
+正しい
+ a| 
+いいえ
+
+
+
+ a| 
+startVolumeID
+ a| 
+返される最初のボリューム ID 。この ID のボリュームが存在しない場合は、 ID 順で次に位置するボリュームがリストの先頭として使用されます。リストをページングするには、前の応答の最後のボリュームに「 1 」を加えたボリューム ID を渡します。
+ a| 
+整数
+ a| 
+0
+ a| 
+いいえ
+
+
+
+ a| 
+制限
+ a| 
+返されるボリューム情報オブジェクトの最大数。0 （ゼロ）はすべてのボリュームを返します（無制限）。
+ a| 
+整数
+ a| 
+無制限
+ a| 
+いいえ
+
+|===
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+
+
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+ボリューム
+ a| 
+アクティブなボリュームのリスト。
+ a| 
+xref:reference_element_api_volume.adoc[ボリューム]アレイ
+
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+   "method": "ListActiveVolumes",
+   "params": {
+      "startVolumeID"  : 0,
+      "limit" : 1000
+   },
+   "id" : 1
+}
+----
+
+
+== 応答例
+
+この応答例は分量が多いため、補足のトピックに記載しています。
+
+
+
+== 新規導入バージョン
+
+9.6

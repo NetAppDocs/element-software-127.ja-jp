@@ -1,0 +1,26 @@
+---
+permalink: storage/task_data_manage_vol_access_group_edit_an_initiator.html 
+sidebar: sidebar 
+keywords: initiator, edit, change alias, chap, credentials 
+summary: 既存のイニシエータのエイリアスを変更するか、既存のエイリアスがない場合はエイリアスを追加できます。 
+---
+= イニシエータを編集します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存のイニシエータのエイリアスを変更するか、既存のエイリアスがない場合はエイリアスを追加できます。
+
+イニシエータごとにCHAPアカウント名とクレデンシャルを追加するには、API呼び出しを使用してCHAPアクセスと属性を削除および追加する必要があり `ModifyInitiator`ます。
+
+を参照して link:../api/index.html["Element API を使用してストレージを管理します"]
+
+.手順
+. [* 管理 *>* イニシエータ *] をクリックします。
+. 編集するイニシエータの操作アイコンをクリックします。
+. [ 編集（ Edit ） ] をクリックします。
+. [* Alias* ] フィールドに、イニシエータの新しいエイリアスを入力します。
+. [ 変更の保存 *] をクリックします。
+

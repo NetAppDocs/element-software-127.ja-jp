@@ -1,0 +1,19 @@
+---
+permalink: concepts/concept_intro_management_services_for_afa.html 
+sidebar: sidebar 
+keywords: what is, what are, management services, service, vcp service, plugin service, microservice 
+summary: 管理サービスは、 SolidFire オールフラッシュストレージに幅広い管理機能を一元的に提供します。管理サービスには、 Active IQ システムテレメトリ、ログ、サービスの更新、および Element Plug-in for vCenter の QoSSIOC サービスが含まれます。 
+---
+= SolidFire オールフラッシュストレージの管理サービス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Element 11.3リリース以降、*管理サービス*がでホストされるlink:../concepts/concept_intro_management_node.html["管理ノード"]ようになりました。これにより、メジャーリリース以外の特定のソフトウェアサービスを迅速に更新できます。
+
+管理サービスは、 SolidFire オールフラッシュストレージに幅広い管理機能を一元的に提供します。これらのサービスにはlink:../concepts/concept_intro_solidfire_software_interfaces.html#netapp-element-plug-in-for-vcenter-server["NetAppハイブリッドクラウドコントロール"]、Active IQシステムテレメトリ、ロギング、サービスの更新のほか、Element Plug-in for vCenterのQoSSIOCサービスが含まれます。
+
+
+TIP: 詳細については、をご覧ください link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスのリリース"^]。

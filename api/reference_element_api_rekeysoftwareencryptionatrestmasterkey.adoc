@@ -1,0 +1,86 @@
+---
+permalink: api/reference_element_api_rekeysoftwareencryptionatrestmasterkey.html 
+sidebar: sidebar 
+keywords: system, api, element, security, rekey, software encryption at rest 
+summary: RekeySoftwareEncryptionAtRestMasterKey メソッドを使用すると、 DEK （データ暗号化キー）の暗号化に使用される保存時のソフトウェア暗号化マスターキーを再生成できます。 
+---
+= RekeySoftwareEncryptionAtRestMasterKey
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、DEK（データ暗号化キー）の暗号化に使用するソフトウェアの保存データ暗号化マスターキーのキーを変更できます `RekeySoftwareEncryptionAtRestMasterKey`。クラスタ作成時に、保存データのソフトウェア暗号化が内部キー管理（ IKM ）を使用するように設定されます。このキー再生成方法は、クラスタの作成後に IKM または外部キー管理（ EKM ）を使用するために使用できます。
+
+
+
+== パラメータ
+
+このメソッドの入力パラメータは次のとおりです。パラメータを指定しない場合 `keyManagementType`、既存のキー管理設定を使用してキー変更処理が実行されます。を指定し、キープロバイダが外部の場合は `keyManagementType`、 `keyProviderID`パラメータも使用する必要があります。
+
+[cols="4*"]
+|===
+| パラメータ | 製品説明 | タイプ | オプション 
+
+
+| keyManagementType をクリックします | マスターキーの管理に使用されるキー管理のタイプ。有効な値は次のとおりです。
+`Internal`内部キー管理を使用してキーを変更します。
+`External`:外部キー管理を使用してキーを変更します。このパラメータを指定しない場合は、既存のキー管理設定を使用してキー変更処理が実行されます。 | 文字列 | 正しい 
+
+
+| KeyProviderID | 使用するキープロバイダの ID 。これは、いずれかのメソッドの一部として返される一意の値です `CreateKeyProvider`。IDは、がで `External`ない場合にのみ必要で、それ以外の場合 `keyManagementType`は無効です。 | 整数 | 正しい 
+|===
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+[cols="4*"]
+|===
+| パラメータ | 製品説明 | タイプ | オプション 
+
+
+| asyncHandle | この値をに指定して `GetAsyncResult`、キー変更処理のステータスを確認します `asyncHandle`。 `GetAsyncResult`出力には、新しいマスターキーに関する情報を含むフィールドと、 `keyToDecommission`古いキーに関する情報を含むフィールドが含まれ `newKey`ます。 | 整数 | 正しくない 
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+ "method": "rekeysoftwareencryptionatrestmasterkey",
+ "params": {
+   "keyManagementType": "external",
+   "keyProviderID": "<ID number>"
+ }
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+    "asyncHandle": 1
+}
+----
+
+
+== 新規導入バージョン
+
+12.3
+
+[discrete]
+== 詳細情報
+
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["以前のバージョンの NetApp SolidFire 製品および Element 製品に関するドキュメント"^]
+

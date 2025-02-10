@@ -1,0 +1,30 @@
+---
+permalink: storage/task_snapmirror_use_replication_between_element_and_ontap_clusters.html 
+sidebar: sidebar 
+keywords: replication, snapmirror, data protection 
+summary: SnapMirror関係は、NetApp Element UIのデータ保護タブから作成できます。この情報をユーザインターフェイスで確認するには、 SnapMirror 機能を有効にする必要があります。 
+---
+= ElementクラスタとONTAPクラスタの間でSnapMirrorレプリケーションを使用（Element UI）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror関係は、NetApp Element UIのデータ保護タブから作成できます。この情報をユーザインターフェイスで確認するには、 SnapMirror 機能を有効にする必要があります。
+
+NetApp Element ソフトウェアクラスタと ONTAP クラスタの間の SnapMirror レプリケーションでは、 IPv6 はサポートされていません。
+
+https://www.youtube.com/embed/kerGI1ZtnZQ?rel=0["NetAppのビデオ：SnapMirror for NetApp HCI and Element Software"^]
+
+NetApp Element ソフトウェアを実行するシステムでは、 NetApp ONTAP システムとの間での SnapMirror 機能を使用した Snapshot コピーのコピーとリストアがサポートされます。このテクノロジを使用する主な理由は、 NetApp HCI から ONTAP へのディザスタリカバリです。エンドポイントには、 ONTAP 、 ONTAP Select 、 Cloud Volumes ONTAP があります。TR-4641 ：『 NetApp HCI Data Protection 』を参照してください。
+
+https://www.netapp.com/pdf.html?item=/media/17048-tr4641pdf.pdf["NetAppテクニカルレポート4641：『NetApp HCIデータ保護』"^]
+
+
+
+== 詳細情報
+
+* https://www.netapp.com/pdf.html?item=/media/16991-tr4748pdf.pdf["NetApp HCI 、 ONTAP 、コンバージドインフラでデータファブリックを構築できます"^]
+* link:element-replication-index.html["NetApp ElementソフトウェアとONTAP間のレプリケーション（ONTAP CLI）"]
+

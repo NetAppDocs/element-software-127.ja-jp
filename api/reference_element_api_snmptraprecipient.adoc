@@ -1,0 +1,51 @@
+---
+permalink: api/reference_element_api_snmptraprecipient.html 
+sidebar: sidebar 
+keywords: object,objects,snmptraprecipient 
+summary: snmpTrapRecipient オブジェクトには、ストレージクラスタが生成した SNMP トラップを受信するように設定されているホストに関する情報が含まれます。GetSnmpTrapInfo API メソッドを使用すると、 SNMP トラップを受信するように設定されているホストのリストを取得できます。 
+---
+= snmpTrapRecipient のこと
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+snmpTrapRecipient オブジェクトには、ストレージクラスタが生成した SNMP トラップを受信するように設定されているホストに関する情報が含まれます。APIメソッドを使用すると、SNMPトラップを受信するように設定されているホストのリストを取得できます `GetSnmpTrapInfo`。
+
+
+
+== オブジェクトメンバー
+
+このオブジェクトのメンバーは次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+ホスト
+ a| 
+ターゲットホストの IP アドレスまたはホスト名。
+ a| 
+文字列
+
+
+
+ a| 
+ポート
+ a| 
+トラップを送信するホストの UDP ポート番号。有効な範囲は 1~65535 です。0 （ゼロ）は有効なポート番号ではありません。デフォルトのポートは162です。
+ a| 
+整数
+
+
+
+ a| 
+コミュニティ
+ a| 
+SNMP コミュニティストリング。
+ a| 
+文字列
+
+|===

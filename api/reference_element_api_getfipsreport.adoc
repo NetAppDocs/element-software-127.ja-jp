@@ -1,0 +1,93 @@
+---
+permalink: api/reference_element_api_getfipsreport.html 
+sidebar: sidebar 
+keywords: fips,report,get,getting,getfipsreport,feature,support 
+summary: GetFipsReport メソッドを使用すると、ストレージクラスタ内のすべてのノードの FIPS 140-2 暗号化機能サポートステータスを確認できます。 
+---
+= GetFipsReport のようになりました
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、ストレージクラスタ内のすべてのノードのFIPS 140-2暗号化機能のサポートステータスを確認できます `GetFipsReport`。
+
+
+
+== パラメータ
+
+このメソッドには入力パラメータはありません。
+
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+結果
+ a| 
+すべてのノードの FIPS 140-2 機能サポート状況、および照会に応答しなかった各ノードのエラー情報を含む JSON オブジェクト。
+ a| 
+xref:reference_element_api_fipsreport.adoc[fipsReport]
+
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+  "method": "GetFipsReport",
+  "params": {},
+  "id" : 1
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+    "id": 1,
+    "result": {
+    "nodes": [
+        {
+           "nodeID": 1,
+		   "fipsDrives": "None",
+           "httpsEnabled": true
+        },
+        {
+           "nodeID": 3,
+		   "fipsDrives": "None",
+           "httpsEnabled": true
+        }
+    ],
+    "errorNodes": [
+        {
+           "nodeID": 2,
+           "error": {
+               "message": "The RPC timed out.",
+               "name": "xRpcTimeout"
+               }
+        }
+    ]
+    }
+}
+----
+
+
+== 新規導入バージョン
+
+10.3

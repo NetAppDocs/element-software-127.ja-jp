@@ -1,0 +1,87 @@
+---
+permalink: api/reference_element_api_certificatedetails.html 
+sidebar: sidebar 
+keywords: security,certificate,SSL,get,getting,certificateDetails,object,objects 
+summary: certificateDetails オブジェクトには、セキュリティ証明書に関するデコードされた情報が含まれます。 
+---
+= 証明書の詳細
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ `certificateDetails`オブジェクトには、セキュリティ証明書に関するデコードされた情報が含まれます。
+
+
+
+== オブジェクトメンバー
+
+このオブジェクトのメンバーは次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+`issuer`
+ a| 
+発行元の名前。
+ a| 
+文字列
+
+
+
+ a| 
+`modulus`
+ a| 
+公開鍵のモジュラス。
+ a| 
+文字列
+
+
+
+ a| 
+`notAfter`
+ a| 
+証明書の有効期限。
+ a| 
+ISO 8601 形式の文字列
+
+
+
+ a| 
+`notBefore`
+ a| 
+証明書の開始日。
+ a| 
+ISO 8601 形式の文字列
+
+
+
+ a| 
+`serial`
+ a| 
+証明書のシリアル番号。
+ a| 
+文字列
+
+
+
+ a| 
+`sha1Fingerprint`
+ a| 
+DER でエンコードされたバージョンの証明書のダイジェスト。
+ a| 
+文字列
+
+
+
+ a| 
+`subject`
+ a| 
+件名。
+ a| 
+文字列
+
+|===

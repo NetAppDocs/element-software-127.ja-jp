@@ -1,0 +1,18 @@
+---
+permalink: storage/concept_snapmirror_overview.html 
+sidebar: sidebar 
+keywords: element, ui, overview, snapmirror, snapshots, replication, relationships, oontap 
+summary: NetApp Element ソフトウェアを実行するシステムでは、 NetApp ONTAP システムとの間での SnapMirror 機能を使用した Snapshot のコピーとリストアがサポートされます。 
+---
+= SnapMirror の概要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Element ソフトウェアを実行するシステムでは、 NetApp ONTAP システムとの間での SnapMirror 機能を使用した Snapshot のコピーとリストアがサポートされます。
+
+Element を実行するシステムは、 9.3 以降の ONTAP システムの SnapMirror と直接通信できます。NetApp Element APIには、クラスタ、ボリューム、SnapshotでSnapMirror機能を有効にするメソッドが用意されています。さらに、 Element UI には、 Element ソフトウェアと ONTAP システムの間の SnapMirror 関係を管理するために必要なすべての機能が搭載されています。
+
+機能は限定されますが、特定のユースケースで ONTAP ボリュームを Element ボリュームにレプリケートできます。詳細については、を参照してください link:element-replication-index.html["ElementソフトウェアとONTAPの間のレプリケーション（ONTAP CLI）"]。

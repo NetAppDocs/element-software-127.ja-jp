@@ -1,0 +1,18 @@
+---
+permalink: concepts/concept_intro_management_node.html 
+sidebar: sidebar 
+keywords: what is, element mnode, management node, mnode 
+summary: 管理ノード（ mNode ）は、 Element ソフトウェアベースの 1 つ以上のストレージクラスタと同時に実行される仮想マシンです。監視とテレメトリなどのシステムサービスのアップグレードと提供、クラスタのアセットと設定の管理、システムのテストとユーティリティの実行、トラブルシューティング用のNetAppサポートへのアクセスの有効化に使用します。 
+---
+= Element ソフトウェアの管理ノード
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+はlink:../mnode/task_mnode_work_overview.html["管理ノード（ mNode ）"]、Elementソフトウェアベースの1つ以上のストレージクラスタと並行して実行される仮想マシンです。監視とテレメトリなどのシステムサービスのアップグレードと提供、クラスタのアセットと設定の管理、システムのテストとユーティリティの実行、トラブルシューティング用のNetAppサポートへのアクセスの有効化に使用します。
+
+管理ノードはストレージクラスタと通信して管理操作を実行しますが、ストレージクラスタのメンバーではありません。管理ノードは、 API 呼び出しを使用してクラスタに関する情報を定期的に収集し、この情報を Active IQ に報告してリモート監視（有効な場合）に利用します。管理ノードでは、クラスタノードのソフトウェアアップグレードの調整も担当します。
+
+Element 11.3 リリース以降、管理ノードはマイクロサービスホストとして機能するようになりました。そのため、メジャーリリースを待つことなく、希望するソフトウェアサービスを更新できます。これらのマイクロサービスまたはlink:../concepts/concept_intro_management_services_for_afa.html["管理サービス"]は、サービスバンドルとして頻繁に更新されます。

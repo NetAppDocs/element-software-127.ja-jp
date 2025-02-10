@@ -1,0 +1,18 @@
+---
+permalink: try/task_try_overview.html 
+sidebar: sidebar 
+keywords: solidfire, element, lab on demand, demo node, element demo node 
+summary: Element ソフトウェアの導入に役立つリソースとツールをご紹介します。 
+---
+= ぜひお試しください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Element ソフトウェアの導入に役立つリソースとツールをご紹介します。
+
+* https://handsonlabs.netapp.com/lab/elementsw["Element によるプライベートクラウドストレージの柔軟性に関するラボオンデマンド（ログインが必要）"^]：このラボでは、Elementソフトウェアを実行するストレージシステムに適用される、無制限のスケールアウト、ワークロードのパフォーマンス保証、ストレージインフラの自動化の概念について説明します。
+* link:task_use_demonode.html["Element のデモノードを使用してストレージ機能を試します"^]：ElementデモノードはElementソフトウェアのVMware仮想マシンバージョンです。このノードを使用すると、NetApp HCIおよびSolidFire製品の主要なストレージ機能の多くを簡単にデモできます。
+

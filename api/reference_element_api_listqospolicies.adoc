@@ -1,0 +1,122 @@
+---
+permalink: api/reference_element_api_listqospolicies.html 
+sidebar: sidebar 
+keywords: qos,policy,policies,list,listing,listqospolicies 
+summary: ListQoSPolicy メソッドを使用して、システムのすべての QoS ポリシーの設定をリストできます。 
+---
+= ListQoSPolicies の順にクリックします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メソッドを使用すると、システム上のすべてのQoSポリシーの設定をリストできます `ListQoSPolicies`。
+
+
+
+== パラメータ
+
+このメソッドには入力パラメータはありません。
+
+
+
+== 戻り値
+
+このメソッドの戻り値は次のとおりです。
+
+|===
+| 名前 | 製品説明 | タイプ 
+
+
+ a| 
+qosPolicies ページにアクセスします
+ a| 
+各 QoS ポリシーに関する詳細のリスト。
+ a| 
+xref:reference_element_api_qospolicy.adoc[QoSPolicy のように表示]アレイ
+
+|===
+
+
+== 要求例
+
+このメソッドの要求例を次に示します。
+
+[listing]
+----
+{
+  "id": 231,
+  "method": "ListQoSPolicies",
+  "params": {}
+}
+----
+
+
+== 応答例
+
+このメソッドの応答例を次に示します。
+
+[listing]
+----
+{
+  "id": 231,
+  "result": {
+    "qosPolicies": [
+      {
+        "name": "silver",
+        "qos": {
+          "burstIOPS": 15000,
+          "burstTime": 60,
+          "curve": {
+            "4096": 100,
+            "8192": 160,
+            "16384": 270,
+            "32768": 500,
+            "65536": 1000,
+            "131072": 1950,
+            "262144": 3900,
+            "524288": 7600,
+            "1048576": 15000
+          },
+          "maxIOPS": 14000,
+          "minIOPS": 50
+        },
+        "qosPolicyID": 1,
+        "volumeIDs": [
+          1
+        ]
+      },
+      {
+        "name": "bronze",
+        "qos": {
+          "burstIOPS": 15000,
+          "burstTime": 60,
+          "curve": {
+            "4096": 100,
+            "8192": 160,
+            "16384": 270,
+            "32768": 500,
+            "65536": 1000,
+            "131072": 1950,
+            "262144": 3900,
+            "524288": 7600,
+            "1048576": 15000
+          },
+          "maxIOPS": 15000,
+          "minIOPS": 50
+        },
+        "qosPolicyID": 2,
+        "volumeIDs": [
+          2
+        ]
+      }
+    ]
+  }
+}
+----
+
+
+== 新規導入バージョン
+
+10.0

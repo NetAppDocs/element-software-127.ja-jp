@@ -1,0 +1,98 @@
+---
+permalink: storage/task_system_manage_rekey_software_ear_master_key.html 
+sidebar: sidebar 
+keywords: element, rekey, encryption at rest, rekey master, replace key 
+summary: Element API を使用して既存のキーを変更できます。このプロセスにより、外部キー管理サーバ用の新しい交換用マスターキーが作成されます。 
+---
+= 保存マスターキーでのソフトウェア暗号化のキーを変更します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Element API を使用して既存のキーを変更できます。このプロセスにより、外部キー管理サーバ用の新しい交換用マスターキーが作成されます。マスターキーは常に新しいマスターキーに置き換えられ、複製や上書きは行われません。
+
+次のいずれかの手順で、キーの変更が必要になることがあります。
+
+* 内部キー管理から外部キー管理への変更の一環として、新しいキーを作成します。
+* セキュリティ関連イベントに対する応答または保護として、新しいキーを作成します。
+
+
+
+NOTE: このプロセスは非同期で、キー変更処理が完了する前に応答を返します。メソッドを使用すると、システムをポーリングしてプロセスがいつ完了したかを確認できますlink:../api/reference_element_api_getasyncresult.html["GetAsyncResult"]。
+
+.必要なもの
+* ボリュームがなくI/Oもない新しいクラスタで、メソッドを使用して保存データのソフトウェア暗号化を有効にしたlink:../api/reference_element_api_createcluster.html["クラスタの作成"]。続行する前に、link:../api/ reference_element_api_getsoftwareencryptionatrestinfo.htmlを使用して[`GetSoftwareEncryptionatRestInfo`状態がであることを確認し `enabled`てください。
+* SolidFireクラスタと外部キーサーバ（EKS）の間に配置しておきlink:../storage/task_system_manage_key_set_up_external_key_management.html["信頼関係を確立しました"]ます。メソッドを実行しlink:../api/reference_element_api_testkeyserverkmip.html["TestKeyProviderKmip"]て、キープロバイダへの接続が確立されたことを確認します。
+
+
+.手順
+. コマンドを実行しlink:../api/reference_element_api_listkeyserverskmip.html["ListKeyProvidersKmip"]てキープロバイダID(`keyProviderID`をコピーします）。
+. 前の手順で取得したキープロバイダのID番号として、パラメータにとを `keyProviderID`指定 `external`し `keyManagementType`てを実行しlink:../api/reference_element_api_rekeysoftwareencryptionatrestmasterkey.html["RekeySoftwareEncryptionAtRestMasterKey"]ます。
++
+[listing]
+----
+{
+ "method": "rekeysoftwareencryptionatrestmasterkey",
+ "params": {
+   "keyManagementType": "external",
+   "keyProviderID": "<ID number>"
+ }
+}
+----
+. コマンド応答から値 `RekeySoftwareEncryptionAtRestMasterKey`をコピーし `asyncHandle`ます。
+. 前の手順の値を指定してコマンドを `asyncHandle`実行しlink:../api/reference_element_api_getasyncresult.html["GetAsyncResult"]、設定の変更を確認します。コマンド応答から、古いマスターキー設定が新しいキー情報で更新されたことがわかります。新しいキープロバイダ ID をコピーして以降の手順で使用します。
++
+[listing]
+----
+{
+   "id": null,
+   "result": {
+     "createTime": "2021-01-01T22:29:18Z",
+     "lastUpdateTime": "2021-01-01T22:45:51Z",
+     "result": {
+       "keyToDecommission": {
+         "keyID": "<value>",
+         "keyManagementType": "internal"
+     },
+     "newKey": {
+       "keyID": "<value>",
+       "keyManagementType": "external",
+       "keyProviderID": <value>
+     },
+     "operation": "Rekeying Master Key. Master Key management being transferred from Internal Key Management to External Key Management with keyProviderID=<value>",
+     "state": "Ready"
+   },
+   "resultType": "RekeySoftwareEncryptionAtRestMasterKey",
+   "status": "complete"
+}
+----
+. コマンドを実行し `GetSoftwareEncryptionatRestInfo`て、新しいキーの詳細（を含む）が更新されたことを確認します `keyProviderID`。
++
+[listing]
+----
+{
+   "id": null,
+   "result": {
+     "masterKeyInfo": {
+       "keyCreatedTime": "2021-01-01T22:29:18Z",
+       "keyID": "<updated value>",
+       "keyManagementType": "external",
+       "keyProviderID": <value>
+     },
+     "rekeyMasterKeyAsyncResultID": <value>
+     "status": "enabled",
+     "version": 1
+   },
+}
+----
+
+
+[discrete]
+== 詳細情報
+
+* link:../api/concept_element_api_about_the_api.html["Element API を使用してストレージを管理します"]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["以前のバージョンの NetApp SolidFire 製品および Element 製品に関するドキュメント"^]
+

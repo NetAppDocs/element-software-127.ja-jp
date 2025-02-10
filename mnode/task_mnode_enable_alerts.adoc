@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: mnode/task_mnode_enable_alerts.html 
+summary: SolidFire オールフラッシュストレージシステムでは、アラートを監視するように設定することはできません。 
+keywords: netapp, Element, management node, mnode, ui, alerts, alert monitoring 
+---
+= アラートの監視を設定
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+アラート監視ツールは、 NetApp HCI のアラート監視用に設定されています。これらのツールは、 SolidFire オールフラッシュストレージには設定も使用もされません。これらのクラスタに対してツールを実行すると、次の405エラーが表示されます。これは構成を考慮した場合の想定どおりの動作です。 `webUIParseError : Invalid response from server. 405`
+
+NetApp HCIのアラート監視の設定の詳細については、を参照してください。link:https://docs.netapp.com/us-en/hci/docs/task_mnode_enable_alerts.html["アラートの監視を設定"^]
