@@ -7989,7 +7989,6 @@
   <block id="6d8cd87a85946daeae42cb54aade3baa" category="section-title">手順1：ISOまたはOVAをダウンロードしてVMを導入する</block>
   <block id="90c4d8ddd76d9f5f86c144316cec5657" category="paragraph">NetAppサポートサイトから適切なISOまたはOVAをダウンロードし、VMをインストールします。</block>
   <block id="12b8893b065179b6b80fdc2d448862df" category="inline-link-macro">Element ソフトウェア</block>
-  <block id="4aee9657f267c579c49541b5f19ca32c" category="list-text">NetAppサポートサイトのページから、インストールに対応したOVAまたはISOをダウンロードし<block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>ます。新しいOVAには更新されたSSL証明書が含まれています。</block>
   <block id="7b4b2bec7b806d58982537647a92deef" category="list-text">Download Latest Release * を選択し、 EULA に同意します。</block>
   <block id="9fd5f1f79bb7ead4a7bdb1a4e6b94825" category="list-text">ダウンロードする管理ノードのイメージを選択します。</block>
   <block id="b8ccf40afa6e3a195a8f4d93c8daa17d" category="list-text">OVA をダウンロードした場合は、次の手順を実行します。</block>
@@ -12303,4 +12302,5 @@
   <block id="bc0ffe4508f685d32386d4fcd929dd50" category="list-text">"HH：mm：ss"</block>
   <block id="99eb6e1c13e9ae0bb02e022566f20121" category="paragraph">スケジュールに指定した一意の名前、作成した Snapshot の保持期間、 Snapshot 作成元のボリュームのボリューム ID が含まれます。有効な値：</block>
   <block id="65dc2083558f47cd1151751a12c24549" category="paragraph">同期操作のタイプに応じた浮動小数点数または整数</block>
+  <block id="e43f2538484fde027e53efbedb634fce" category="list-text">NetAppサポートサイトのページから、インストールに対応したOVAまたはISOをダウンロードし<block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>ます。</block>
 </blocks>
