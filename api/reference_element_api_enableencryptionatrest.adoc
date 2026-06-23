@@ -14,7 +14,7 @@ summary: EnableEncryptionAtRest メソッドを使用すると、クラスタの
 メソッドを使用すると、クラスタの保存データのAdvanced Encryption Standard（AES）256ビット暗号化を有効にして、各ノードのドライブで使用される暗号化キーをクラスタで管理できるようになります `EnableEncryptionAtRest`。この機能はデフォルトでは有効になっていません。
 
 
-TIP: クラスタ上の保存データの暗号化または保存データのソフトウェア暗号化の現在のステータスを確認するには、を使用しlink:../api/reference_element_api_getclusterinfo["クラスタ情報メソッドを取得します"^]ます。を使用できます `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo["クラスタが保存データの暗号化に使用する情報を取得する方法"^]。
+TIP: クラスタ上の保存データの暗号化または保存データのソフトウェア暗号化の現在のステータスを確認するには、を使用しlink:../api/reference_element_api_getclusterinfo.html["クラスタ情報メソッドを取得します"^]ます。を使用できます `GetSoftwareEncryptionAtRestInfo` link:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["クラスタが保存データの暗号化に使用する情報を取得する方法"^]。
 
 
 NOTE: この方法では、保存データのソフトウェア暗号化は有効になりません。これは、をに設定した `true`場合に `enableSoftwareEncryptionAtRest`のみ実行できlink:../api/reference_element_api_createcluster.html["クラスタメソッドを作成します"^]ます。

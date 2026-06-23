@@ -2911,7 +2911,6 @@
   <block id="fa41977f5f08e489eda2b2bb50a4de69" category="paragraph">SSH サービスを有効にしておく時間。</block>
   <block id="a1c5aa843b544d43737e68bf101cd099" category="summary">EnableEncryptionAtRest メソッドを使用すると、クラスタの保存データの Advanced Encryption Standard\ （ AES\ ） 256 ビット暗号化を有効にできます。これにより、各ノードのドライブで使用される暗号化キーをクラスタで管理できるようになります。この機能はデフォルトでは有効になっていません。</block>
   <block id="f7fbdcd0f959ea03f9c9fe10c1f436f5" category="paragraph">メソッドを使用すると、クラスタの保存データのAdvanced Encryption Standard（AES）256ビット暗号化を有効にして、各ノードのドライブで使用される暗号化キーをクラスタで管理できるようになります<block ref="b0a869229fda0716942c6afbaa26ba2a" prefix=" " category="inline-code"></block>。この機能はデフォルトでは有効になっていません。</block>
-  <block id="8645b3842f2ebbd31ef1556eca13e734" category="admonition">クラスタ上の保存データの暗号化または保存データのソフトウェア暗号化の現在のステータスを確認するには、を使用し<block ref="266af3c6722606b03dffbc748cf8f335" category="inline-link-macro-rx"></block>ます。を使用できます<block ref="2132cae62c1d77dfa3dd7c3447c77cf5" prefix=" " category="inline-code"></block> <block ref="71cd4d0c7a8355e8bd1074b7039cdde9" category="inline-link-macro-rx"></block>。</block>
   <block id="9a3e77d40a36fc6582491b29c79ad64a" category="inline-link-macro">クラスタメソッドを作成します</block>
   <block id="54345a69ac071e42416d101550699426" category="admonition">この方法では、保存データのソフトウェア暗号化は有効になりません。これは、をに設定した<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>場合に<block ref="8a6d1a92159080729def71f4e50f41d0" prefix=" " category="inline-code"></block>のみ実行でき<block ref="156163f61ad8e976859b5234666eb7c2" category="inline-link-macro-rx"></block>ます。</block>
   <block id="79c6818b5a784bd2a9784bba4752ebda" category="paragraph">保存データの暗号化を有効にすると、クラスタ内の各ノードのドライブについて、暗号化キーがクラスタ内部で自動的に管理されます。</block>
@@ -6203,7 +6202,6 @@
   <block id="99494896be55aff6e412f1ef0dd3ca4c" category="list-text"><block ref="1f3c51825f286c5250086b5376a2ce29" category="inline-xref-macro-rx"></block></block>
   <block id="e56841e919b23e1af6ae192bcf82f545" category="list-text"><block ref="b85ef421159ab16d832d7cee8cebee71" category="inline-xref-macro-rx"></block></block>
   <block id="e73fbad1f8418c19025f40cdb1b36fc8" category="inline-link">TR-4741 ：『 NetApp Element Software Remote Replication 』</block>
-  <block id="47fd1428a184377839b3521d9b89b20c" category="paragraph">詳細については、を参照してください<block ref="5fe7d084aafda4fb5c53715a85948ffe" category="inline-link-rx"></block>。</block>
   <block id="ff5dd3355a0a16a7f2fc734ab2229851" category="section-title">クラスタ間の同期レプリケーションと非同期レプリケーション</block>
   <block id="697cef1ff0b4e36164796a8a21f78548" category="paragraph">NetApp Element ソフトウェアを実行するクラスタでは、リアルタイムレプリケーションを使用してボリュームデータのリモートコピーを迅速に作成できます。</block>
   <block id="0389e516b3bf2b6b34e9309ede779a02" category="paragraph">1 つのストレージクラスタを最大 4 つの他のストレージクラスタとペアリングすることができます。フェイルオーバーやフェイルバックの際には、クラスタペアのどちらかのクラスタからボリュームのデータを同期または非同期でレプリケートできます。</block>
@@ -6229,7 +6227,6 @@
   <block id="2e02ae79fb104d3c608baf3627930722" category="paragraph">プライマリストレージのソースボリュームとセカンダリストレージのデスティネーションボリュームの関係を、データ保護関係と呼びます。クラスタは、ボリュームが配置されているエンドポイントと呼ばれ、レプリケートされたデータを含むボリュームがピアリングされている必要があります。ピア関係にあることで、クラスタとボリュームの間でデータをセキュアにやり取りできます。</block>
   <block id="e8eee300f648a33639310b4549ed1596" category="paragraph">SnapMirror は、 NetApp ONTAP コントローラにあらかじめ搭載されており、 NetApp HCI クラスタと SolidFire クラスタで実行される Element に統合されています。SnapMirror を制御するロジックは ONTAP ソフトウェアにあるため、連携して機能するには、すべての SnapMirror 関係に少なくとも 1 つ ONTAP システムが含まれている必要があります。ユーザは主に Element UI から Element クラスタと ONTAP クラスタの間の関係を管理しますが、一部の管理タスクは NetApp ONTAP System Manager で実行します。また、 ONTAP と Element の両方で使用できる CLI と API を使用して SnapMirror を管理することもできます。</block>
   <block id="d95bb83fde5706bb5398bb94c8106f7f" category="inline-link">TR-4651 ：『 NetApp SolidFire SnapMirror Architecture and Configuration 』</block>
-  <block id="05f383efa661d49bdf542c9e9e281e05" category="paragraph">を参照<block ref="eea98aade109823686927fb53af38fab" category="inline-link-rx"></block>（ログインが必要）</block>
   <block id="52b5fba1a62806fe621dc72218549e9c" category="paragraph">Element ソフトウェアを使用して、クラスタレベルで SnapMirror 機能を手動で有効にする必要があります。SnapMirror 機能はデフォルトでは無効になっており、新規インストール時やアップグレード時に自動的に有効になることはありません。</block>
   <block id="237207bac5b8584faf6c036500958cad" category="paragraph">SnapMirror を有効にしたあと、 Element ソフトウェアの Data Protection タブで SnapMirror 関係を作成できます。</block>
   <block id="5ce5a4c32220893139a79b7961ce29a5" category="paragraph">NetApp Element ソフトウェア 10.1 以降では、 ONTAP システムの SnapMirror 機能による Snapshot のコピーとリストアがサポートされます。</block>
@@ -8392,7 +8389,6 @@
   <block id="a79cb3c0c41f2980c808abd31214f26a" category="list-text">ノードにアクセスするには、 TUI に表示される DHCP アドレスが必要です。DHCP アドレスを使用して、ノードをクラスタに追加することはできません。</block>
   <block id="c1c637b63838f91031e49aa3dd20939f" category="admonition">管理（ Bond1G ）インターフェイスとストレージ（ Bond10G ）インターフェイスは、別々のサブネットに設定する必要があります。Bond1G インターフェイスと Bond10G インターフェイスが同じサブネットに設定されている場合、ストレージトラフィックが Bond1G インターフェイス経由で送信されると、原因ルーティングの問題が発生します。管理トラフィックとストレージトラフィックに同じサブネットを使用する必要がある場合は、 Bond10G インターフェイスを使用するように管理トラフィックを手動で設定してください。ノード UI の * Cluster Settings * ページを使用して、ノードごとに設定を行うことができます。</block>
   <block id="9a9bf61b133c1439f32f8de2ecf7f250" category="list-text">ブラウザウィンドウで、ノードの DHCP IP アドレスを入力します。</block>
-  <block id="718388f7f39786bf6b8ca4edf8cd3017" category="paragraph">ノードにアクセスするには、拡張子を追加する必要があります<block ref="65778ce6afafe9fc8742fe8dcf019b7c" prefix=" " category="inline-code"></block>（例：）<block ref="64eb6fac063c2a648507a12b0411ac57" category="inline-link-rx"></block>。</block>
   <block id="0eabcd304191abe63eb43a2958ee36b2" category="paragraph">「 * ネットワーク設定 * 」タブが開き、「 * Bond1G * 」セクションが表示されます。</block>
   <block id="7875e585e67cbdd7085c34c30f00f523" category="list-text">1G 管理ネットワークの設定を入力します。</block>
   <block id="686752ec008c4578ce224ca405d8d384" category="list-text">[ 変更の適用 *] をクリックします。</block>
@@ -8785,11 +8781,8 @@
   <block id="c790184773e8ef26c5af49a38611a471" category="summary">統合型バックアップ機能を使用して、ボリューム Snapshot をバックアップできます。Snapshot は、 SolidFire クラスタから外部のオブジェクトストア、または別の SolidFire クラスタにバックアップできます。Snapshot を外部のオブジェクトストアにバックアップする場合は、オブジェクトストアに接続していて、読み取り / 書き込み処理が許可されている必要があります。</block>
   <block id="324fcb27182f60b1051fad39c080b193" category="doc">ボリュームSnapshotをバックアップします</block>
   <block id="6e589b33a7a384693052e3d15301e081" category="inline-link-macro">Amazon S3 オブジェクトストアにボリューム Snapshot をバックアップします</block>
-  <block id="4e385daedad4a81e3776afbca9ea07a7" category="list-text"><block ref="4e385daedad4a81e3776afbca9ea07a7" category="inline-link-macro-rx"></block></block>
   <block id="eea58b3659596532522a08f03fb583b8" category="inline-link-macro">OpenStack Swift オブジェクトストアにボリューム Snapshot をバックアップします</block>
-  <block id="3a50ce5f4085bd0f74405eb1c25f6cc9" category="list-text"><block ref="3a50ce5f4085bd0f74405eb1c25f6cc9" category="inline-link-macro-rx"></block></block>
   <block id="5a7756bec1a6d55954906bd35365f9ec" category="inline-link-macro">ボリューム Snapshot を SolidFire クラスタにバックアップします</block>
-  <block id="091f209abc9bb34dfb86fb2328780ca1" category="list-text"><block ref="091f209abc9bb34dfb86fb2328780ca1" category="inline-link-macro-rx"></block></block>
   <block id="a5599a81e172ea6d5e660325bbceb5b2" category="paragraph">新しいクラスタを作成すると、 1 つのノードがそのクラスタの通信の所有者として初期化され、クラスタ内の各ノードに対してネットワーク通信が確立されます。このプロセスは、新しいクラスタごとに 1 回だけ実行します。クラスタは、 Element UI または API を使用して作成できます。</block>
   <block id="f2745628cc07bb3b82829036c93612f2" category="summary">ストレージノードには 1 つ以上の物理ドライブが搭載され、クラスタのデータの一部が格納されます。クラスタにドライブが追加されると、そのドライブの容量とパフォーマンスがクラスタで使用されるようになります。</block>
   <block id="63a6b9b3b5de50d32228700cfe042610" category="doc">ドライブ</block>
@@ -8976,7 +8969,6 @@
   <block id="652b436094afd98b18ad951a7e4f0cf8" category="inline-link-macro">保存マスターキーでのソフトウェア暗号化のキーを変更します</block>
   <block id="ae4a16d89bc4c1fd130a91d5ecdfc931" category="list-text"><block ref="ae4a16d89bc4c1fd130a91d5ecdfc931" category="inline-link-macro-rx"></block></block>
   <block id="79d1229024e48c87f7159e2ee740ed37" category="inline-link-macro">アクセス不可または無効な認証キーをリカバリします</block>
-  <block id="f1f67a70bba55b3b1679804cb55ea1d1" category="list-text"><block ref="f1f67a70bba55b3b1679804cb55ea1d1" category="inline-link-macro-rx"></block></block>
   <block id="06d3db643866a2632d21e5d307008e72" category="list-text"><block ref="06d3db643866a2632d21e5d307008e72" category="inline-link-macro-rx"></block></block>
   <block id="62d29aedc6ec474773233dd69dabe7c4" category="inline-link-macro">CreateCluster API ：保存データのソフトウェア暗号化を有効にすることができます</block>
   <block id="06a6eb8faffa4fc7f7366b906cc31075" category="list-text"><block ref="06a6eb8faffa4fc7f7366b906cc31075" category="inline-link-macro-rx"></block></block>
@@ -10384,7 +10376,6 @@
   <block id="dc1cc8200d35d9ec64b7565d154fff16" category="paragraph">単一のボリュームまたは複数のボリュームのクローンを作成して、データのポイントインタイムコピーを作成できます。ボリュームをクローニングすると、ボリュームの Snapshot が作成され、次にその Snapshot が参照しているデータのコピーが作成されます。これは非同期のプロセスであり、クローニングするボリュームのサイズおよび現在のクラスタの負荷によって所要時間が異なります。</block>
   <block id="b8a1cad4a50c9260122967b830aa2f1e" category="inline-link">VMFS データストアのコピーをマウントしています</block>
   <block id="d79c3c87976b8fd24486c760b99214ec" category="inline-link">重複する VMFS データストアの管理</block>
-  <block id="4a82b53219bfaabced3d1c81b475eff8" category="admonition">オペレーティングシステムによって、クローニングされたボリュームの処理方法が異なります。VMware ESXi は、クローンボリュームをボリュームコピーまたは Snapshot ボリュームとして扱います。新しいデータストアの作成に使用できるデバイスがボリュームになります。クローンボリュームのマウントとSnapshot LUNの処理の詳細については、および<block ref="6865dba41e05c4300a16bf14013377d9" category="inline-link-rx"></block>に関するVMwareのドキュメントを参照してください<block ref="e578a339e9493d9c63d57360db9fb8b0" category="inline-link-rx"></block>。</block>
   <block id="7df9bea854445d9f3836e4622d758b3b" category="admonition">小さいサイズにクローニングすることによってクローンボリュームのサイズを切り詰める場合は、小さいボリュームに収まるように事前にパーティションを準備してください。</block>
   <block id="743554a1317a874d785bae30fdf78296" category="list-text">単一のボリュームをクローニングするには、次の手順を実行します。</block>
   <block id="0c45f82d13eb2f161b1469f4deca5df8" category="list-text">アクティブ * ページのボリュームのリストで、クローニングするボリュームのアクションアイコンをクリックします。</block>
@@ -11499,12 +11490,10 @@
   <block id="9ff8b52789fcf4cd8906204529630027" category="inline-link-macro">保存データの暗号化を有効にします</block>
   <block id="9775ebff49c9c41a12e6c29e1bd70869" category="list-text"><block ref="9775ebff49c9c41a12e6c29e1bd70869" category="inline-link-macro-rx"></block></block>
   <block id="f18eabe4a84a6e2242d692ca2cf29443" category="inline-link-macro">ノードが FIPS ドライブ機能に対応しているかどうかを確認します</block>
-  <block id="3befc506042904f1158e03c3b06326c9" category="list-text"><block ref="3befc506042904f1158e03c3b06326c9" category="inline-link-macro-rx"></block></block>
   <block id="9129c5de5ce167e52cf19ce107928361" category="inline-link-macro">FIPS ドライブ機能を有効にします</block>
   <block id="fa237f4a9021b3c873d56e11cd75c3c0" category="list-text"><block ref="fa237f4a9021b3c873d56e11cd75c3c0" category="inline-link-macro-rx"></block></block>
   <block id="e89087b4ddd023d83abba85fc6c56531" category="list-text"><block ref="e89087b4ddd023d83abba85fc6c56531" category="inline-link-macro-rx"></block></block>
   <block id="51583c6662a4696f300cf6e612dc8473" category="inline-link-macro">FIPS ドライブ機能のトラブルシューティングを行います</block>
-  <block id="7eb2f48f876157c4d3d83b53793193bc" category="list-text"><block ref="7eb2f48f876157c4d3d83b53793193bc" category="inline-link-macro-rx"></block></block>
   <block id="cb6022b21d38ad9c18b4e35db5ce4c0d" category="summary">保存データの暗号化をクラスタ全体で有効または無効にすることができます。この機能はデフォルトでは有効になっていません。FIPS ドライブをサポートするには、保存データの暗号化を有効にする必要があります。</block>
   <block id="6fd7dcffc5fa89c76487c14dea6a6d74" category="list-text">NetApp Element ソフトウェア UI で、 * クラスタ * &gt; * 設定 * をクリックします。</block>
   <block id="6abed5881b1693582a594003c78956a8" category="list-text">[ 保存データの暗号化を有効にする ] をクリックします。 *</block>
@@ -12152,7 +12141,6 @@
   <block id="8e9a3ba87453eb870e97d5a72d5d9aac" category="inline-link">登録解除します</block>
   <block id="778212e26cda250d5f5f97f4685bf1e0" category="list-text">vCSAおよびWindowsのアップグレードの場合、<block ref="da392680dca74f52691137b810baae7b" category="inline-link-rx"></block>登録ユーティリティを使用してプラグインが関連付けられているvCenter Serverからプラグイン。</block>
   <block id="2aaad98bfcfbd95f21871cf486a3243c" category="inline-link">vCenter Server 、 ESXi 、 VM 、その他の VMware コンポーネントを含む vSphere をアップグレードします</block>
-  <block id="f23d91ab86d1cf2e82bd86fd860c8585" category="list-text"><block ref="f0107c2e24795b3c47b3466dee69927b" category="inline-link-rx"></block>です。</block>
   <block id="f77430f8b3c4f14f1dcd175dca1d54cf" category="paragraph">回避策 を適用せずにVMware vCenter 7.0 Update 3でプラグインを導入できるようにするには、NetApp Element Plug-in for vCenter Server 5.0以降にアップグレードしてください。</block>
   <block id="7389b01d5fe0e17f5523a7fb85295f91" category="inline-link">こちらの技術情報アーティクル</block>
   <block id="af5fe52fe204cf15311c07d5bf36b9a1" category="paragraph">Element Plug-in for vCenter Server 4.xでは、VMware vCenter Server 7.0 Update 3にアップグレードするとプラグインを導入できません。Spring Framework 4を使用してこの問題を解決するには、を参照してください<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
@@ -12303,4 +12291,15 @@
   <block id="99eb6e1c13e9ae0bb02e022566f20121" category="paragraph">スケジュールに指定した一意の名前、作成した Snapshot の保持期間、 Snapshot 作成元のボリュームのボリューム ID が含まれます。有効な値：</block>
   <block id="65dc2083558f47cd1151751a12c24549" category="paragraph">同期操作のタイプに応じた浮動小数点数または整数</block>
   <block id="e43f2538484fde027e53efbedb634fce" category="list-text">NetAppサポートサイトのページから、インストールに対応したOVAまたはISOをダウンロードし<block ref="00b11b6abe7f0003872aa657422c59ae" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="7ed2110dda4e725820c86037ab54d196" category="paragraph">詳細については、<block ref="45dfeaa43e9f1dd00a21977e432c35a4" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="918bb3feb315cdf5db1f413658638047" category="paragraph"><block ref="30ea8dea45042e51ef9f45277c3dcfc3" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="7636dca63eddcafe87de7e1081e289e7" category="paragraph">ノードにアクセスするには、拡張機能<block ref="65778ce6afafe9fc8742fe8dcf019b7c" prefix=" " category="inline-code"></block>を追加する必要があります。たとえば、<block ref="2850388226cc1c7ede5d219e01c8bc62" prefix=" " category="inline-code"></block>。</block>
+  <block id="806181f8afe63ab2176a9668a88c16e9" category="list-text"><block ref="806181f8afe63ab2176a9668a88c16e9" category="inline-link-macro-rx"></block></block>
+  <block id="d64340614e4fc20e1f47eeb584d094b6" category="list-text"><block ref="d64340614e4fc20e1f47eeb584d094b6" category="inline-link-macro-rx"></block></block>
+  <block id="a08e600a476d03b143ad4ffabcc3dc36" category="list-text"><block ref="a08e600a476d03b143ad4ffabcc3dc36" category="inline-link-macro-rx"></block></block>
+  <block id="522cf0a888d1be9011076f48d51639fb" category="list-text"><block ref="522cf0a888d1be9011076f48d51639fb" category="inline-link-macro-rx"></block></block>
+  <block id="8ef81753d43b8f7b12c2601a41b53530" category="admonition">オペレーティングシステムによって、クローンされたボリュームの扱い方が異なります。VMware ESXiは、クローンされたボリュームをボリュームコピーまたはスナップショットボリュームとして扱います。そのボリュームは、新しいデータストアを作成するために使用できるデバイスとなります。クローンボリュームのマウントとスナップショット LUN の処理に関する詳細については、VMware のドキュメントの<block ref="ed78ca20201e0d97922bb7ec954c00dd" category="inline-link-rx"></block>および<block ref="4607ed04fc8b634ce18da0fe1bdcd41c" category="inline-link-rx"></block>を参照してください。</block>
+  <block id="055c37e82a2e8b5a5c2d073fe46d98bb" category="list-text"><block ref="055c37e82a2e8b5a5c2d073fe46d98bb" category="inline-link-macro-rx"></block></block>
+  <block id="c31ff914893a6941b1e7621565be0d0c" category="list-text"><block ref="c31ff914893a6941b1e7621565be0d0c" category="inline-link-macro-rx"></block></block>
+  <block id="fe3c28c386d2be6c3cbda4b2feb01c29" category="list-text"><block ref="e8348e5b207b91893f9322900bc614aa" category="inline-link-rx"></block>.</block>
 </blocks>
