@@ -20,6 +20,7 @@ REST API で実行できるタスクは次のとおりです。
 
 
 
+[[authorization]]
 == 許可
 
 * link:task_mnode_api_get_authorizationtouse.html["REST API を使用するための許可を取得する"]
@@ -27,6 +28,7 @@ REST API で実行できるタスクは次のとおりです。
 
 
 
+[[asset-configuration]]
 == アセットの設定
 
 * link:task_mnode_enable_activeIQ.html["Active IQ とネットアップによる監視を有効にします"]
@@ -38,11 +40,12 @@ REST API で実行できるタスクは次のとおりです。
 
 
 
+[[asset-management]]
 == 資産管理
 
 * link:task_mnode_edit_vcenter_assets.html["既存のコントローラアセットを表示または編集する"]
 * link:task_mnode_manage_storage_cluster_assets.html["ストレージクラスタアセットを作成および管理する"]
-* link:../hccstorage/task-hcc-collectlogs.html#use-the-rest-api-to-collect-netapp-hci-logs["REST API を使用して Element システムログを収集します"]
+* link:../hccstorage/task-hcc-collectlogs.html#use-the-rest-api-to-collect-logs["REST API を使用して Element システムログを収集します"]
 * link:task_mnode_api_find_mgmt_svcs_version.html["管理ノードの OS とサービスのバージョンを確認"]
 * link:task_mnode_logs.html["管理サービスからログを取得しています"]
 

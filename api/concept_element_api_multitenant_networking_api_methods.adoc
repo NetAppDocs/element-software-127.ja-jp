@@ -17,6 +17,7 @@ Element ストレージクラスタのマルチテナントネットワークを
 
 
 
+[[prerequisites-for-setting-up-a-multitenant-virtual-network]]
 == マルチテナント仮想ネットワークをセットアップするための前提条件
 
 * ストレージノード上の仮想ネットワークに割り当てるクライアントネットワーク IP アドレスのブロックを特定しておく必要があります。
@@ -25,6 +26,7 @@ Element ストレージクラスタのマルチテナントネットワークを
 
 
 
+[[virtual-networking-order-of-operations]]
 == 仮想ネットワークの処理順序
 
 . AddVirtualNetwork メソッドを使用して、入力した IP アドレスを一括でプロビジョニングします。
@@ -42,6 +44,7 @@ Element ストレージクラスタのマルチテナントネットワークを
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:concept_element_api_virtual_network_naming_conventions.adoc[仮想ネットワークの命名規則]

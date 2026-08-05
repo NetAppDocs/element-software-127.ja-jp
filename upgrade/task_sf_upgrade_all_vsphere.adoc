@@ -36,6 +36,7 @@ Element Plug-in for vCenter Server 4.xでは、VMware vCenter Server 7.0 Update 
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

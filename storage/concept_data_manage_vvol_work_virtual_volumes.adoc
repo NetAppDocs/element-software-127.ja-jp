@@ -27,6 +27,7 @@ NOTE: VASA Provider を vCenter に登録済みの場合は、複数の vCenter 
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_data_manage_vvol_enable_virtual_volumes.adoc[仮想ボリュームを有効にします]

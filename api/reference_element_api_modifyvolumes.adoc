@@ -28,6 +28,7 @@ NOTE: アクセスステータスを locked または replicationTarget に変�
 
 
 
+[[parameters]]
 == パラメータ
 
 このメソッドの入力パラメータは次のとおりです。
@@ -224,6 +225,7 @@ true に設定すると、記録されているボリューム作成日が変更
 |===
 
 
+[[return-value]]
 == 戻り値
 
 このメソッドの戻り値は次のとおりです。
@@ -244,6 +246,7 @@ xref:reference_element_api_volume.adoc[ボリューム]アレイ
 |===
 
 
+[[request-example]]
 == 要求例
 
 このメソッドの要求例を次に示します。
@@ -273,6 +276,7 @@ xref:reference_element_api_volume.adoc[ボリューム]アレイ
 ----
 
 
+[[response-example]]
 == 応答例
 
 このメソッドの応答例を次に示します。
@@ -373,12 +377,14 @@ xref:reference_element_api_volume.adoc[ボリューム]アレイ
 ----
 
 
+[[new-since-version]]
 == 新規導入バージョン
 
 9.6
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 xref:reference_element_api_getdefaultqos.adoc[GetDefaultQoS の設定]

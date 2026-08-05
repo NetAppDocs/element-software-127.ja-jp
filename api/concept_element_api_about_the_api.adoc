@@ -33,6 +33,7 @@ NOTE: ストレージクラスタの負荷が高い場合や、多数の連続�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

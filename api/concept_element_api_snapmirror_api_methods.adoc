@@ -46,6 +46,7 @@ SnapMirror API メソッドは、リモート ONTAP システムでミラーリ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

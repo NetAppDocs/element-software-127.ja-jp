@@ -33,6 +33,7 @@ Element UI の Cluster タブでは、クラスタ全体の設定を表示およ
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

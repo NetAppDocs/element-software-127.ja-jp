@@ -18,6 +18,7 @@ Element Plug-in for vCenter Serverの詳細については、を参照して htt
 
 
 
+[[for-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

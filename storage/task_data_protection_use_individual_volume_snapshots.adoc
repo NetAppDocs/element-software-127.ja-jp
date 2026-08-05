@@ -15,6 +15,7 @@ summary: ボリューム Snapshot は、ボリュームのポイントインタ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_data_protection_create_a_volume_snapshot.adoc[ボリューム Snapshot を作成します]

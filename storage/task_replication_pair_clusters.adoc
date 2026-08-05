@@ -28,6 +28,7 @@ NOTE: クラスタをペアリングするには、管理ネットワーク上�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 xref:reference_prereq_network_port_requirements.adoc[ネットワークポートの要件]

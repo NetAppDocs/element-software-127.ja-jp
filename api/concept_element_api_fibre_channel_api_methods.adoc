@@ -22,6 +22,7 @@ Fibre Channel API メソッドを使用すると、ストレージクラスタ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

@@ -24,6 +24,7 @@ summary: 共通メソッドは、ストレージクラスタ、 API 自体、ま
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

@@ -99,6 +99,7 @@ ID
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:reference_monitor_cluster_fault_codes.adoc[クラスタ障害コード]

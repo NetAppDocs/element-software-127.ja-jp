@@ -28,6 +28,7 @@ WARNING: SolidFire オールフラッシュストレージクラスタの場合�
 
 
 
+[[check-encryption-at-rest-status]]
 == 保存データの暗号化のステータスを確認します
 
 クラスタ上の保存データの暗号化/ソフトウェアの保存データの暗号化の現在のステータスを表示するには、メソッドを使用しlink:../api/reference_element_api_getclusterinfo.html["GetClusterInfo を使用します"^]ます。メソッドを使用すると、クラスタで保存データの暗号化に使用される情報を取得できますlink:../api/reference_element_api_getsoftwareencryptionatrestinfo.html["GetSoftwareEncryptionAtRestInfo"^]。
@@ -43,6 +44,7 @@ NOTE: ElementソフトウェアUIのダッシュボードでは `https://<MVIP>/
 
 
 
+[[enable-hardware-based-encryption-at-rest]]
 == 保存データのハードウェアベースの暗号化を有効にします
 
 
@@ -54,6 +56,7 @@ NOTE: 外部キー管理の設定を使用して保存データの暗号化を�
 
 
 
+[[enable-software-based-encryption-at-rest]]
 == 保存データのソフトウェアベースの暗号化を有効にします
 
 
@@ -64,6 +67,7 @@ NOTE: 保存データのソフトウェア暗号化は、クラスタで有効�
 
 
 
+[[disable-hardware-based-encryption-at-rest]]
 == 保存データのハードウェアベースの暗号化を無効にします
 
 . Element UI で、 * Cluster * > * Settings * を選択します。

@@ -29,6 +29,7 @@ summary: 多要素認証（ MFA ）を使用して、 Security Assertion Markup 
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

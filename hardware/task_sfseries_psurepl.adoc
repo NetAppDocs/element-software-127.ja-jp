@@ -63,6 +63,7 @@ IMPORTANT: ハードウェアの損傷を防ぐため、電源装置をシャー
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

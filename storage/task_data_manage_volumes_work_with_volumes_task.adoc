@@ -15,6 +15,7 @@ SolidFire システムは、ボリュームを使用してストレージをプ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * link:concept_data_manage_volumes_quality_of_service_policies.html["QoS ポリシーを管理する"]

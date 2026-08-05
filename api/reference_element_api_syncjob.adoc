@@ -17,6 +17,7 @@ APIメソッドを使用すると、同期情報を取得できます `ListSyncJ
 
 
 
+[[object-members]]
 == オブジェクトメンバー
 
 このオブジェクトのメンバーは次のとおりです。
@@ -212,6 +213,7 @@ TotalBytes
 |===
 
 
+[[find-more-information]]
 == 詳細情報
 
 xref:reference_element_api_listsyncjobs.adoc[ListSyncJobs]

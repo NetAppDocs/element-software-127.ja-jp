@@ -28,6 +28,7 @@ image::../media/snapmirror_element_failback2.png[SnapMirror 要素がフェイ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_snapmirror_perform_failback_when_source_volume_exists.adoc[ソースボリュームが存在する場合は、フェイルバックを実行します]

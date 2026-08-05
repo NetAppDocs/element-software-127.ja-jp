@@ -33,7 +33,7 @@ summary: ご使用の環境に合わせてストレージシステムをセッ�
 
 
 ** xref:task_setup_determine_which_solidfire_components_to_install.adoc[インストールする SolidFire コンポーネントを決定します]
-** xref:/task_setup_gh_redirect_set_up_a_management_node.adoc[管理ノードをセットアップ]
+** xref:task_setup_gh_redirect_set_up_a_management_node.adoc[管理ノードをセットアップ]
 ** xref:concept_setup_whats_next.adoc[次の手順]
 
 
@@ -41,6 +41,7 @@ summary: ご使用の環境に合わせてストレージシステムをセッ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://www.netapp.com/data-storage/solidfire/["SolidFire オールフラッシュストレージの概要"^]

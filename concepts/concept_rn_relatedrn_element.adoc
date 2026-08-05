@@ -18,6 +18,7 @@ NOTE: ネットアップサポートのクレデンシャルでログインす�
 
 
 
+[[netapp-element-software]]
 == NetApp Element ソフトウェア
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884468["NetApp Element ソフトウェア12.7リリースノート"^]
@@ -39,6 +40,7 @@ NOTE: ネットアップサポートのクレデンシャルでログインす�
 
 
 
+[[management-services]]
 == 管理サービス
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理サービスリリースノート"^]
@@ -46,6 +48,7 @@ NOTE: ネットアップサポートのクレデンシャルでログインす�
 
 
 
+[[netapp-element-plug-in-for-vcenter-server]]
 == vCenter Server 向け NetApp Element プラグイン
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3330676["『 vCenter Plug-in 5.4 Release Notes 』を参照してください"^]新規_
@@ -65,6 +68,7 @@ NOTE: ネットアップサポートのクレデンシャルでログインす�
 
 
 
+[[storage-firmware]]
 == ストレージファームウェア
 
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.182.0.html["『Storage Firmware Bundle 2.182.0 Release Notes』を参照してください"^]新規_
@@ -81,6 +85,7 @@ NOTE: ネットアップサポートのクレデンシャルでログインす�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

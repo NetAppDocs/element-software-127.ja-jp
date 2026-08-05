@@ -21,18 +21,21 @@ NOTE: このメソッドを使用して保存データのソフトウェア暗�
 
 
 
+[[parameters]]
 == パラメータ
 
 このメソッドには入力パラメータはありません。
 
 
 
+[[return-values]]
 == 戻り値
 
 このメソッドには戻り値はありません。
 
 
 
+[[request-example]]
 == 要求例
 
 このメソッドの要求例を次に示します。
@@ -47,6 +50,7 @@ NOTE: このメソッドを使用して保存データのソフトウェア暗�
 ----
 
 
+[[response-example]]
 == 応答例
 
 このメソッドの応答例を次に示します。
@@ -60,6 +64,7 @@ NOTE: このメソッドを使用して保存データのソフトウェア暗�
 ----
 
 
+[[new-since-version]]
 == 新規導入バージョン
 
 9.6
@@ -67,7 +72,7 @@ NOTE: このメソッドを使用して保存データのソフトウェア暗�
 [discrete]
 == 詳細情報
 
-* link:api/reference_element_api_getclusterinfo.html["GetClusterInfo を使用します"]
+* link:../api/reference_element_api_getclusterinfo.html["GetClusterInfo を使用します"]
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
 * https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["以前のバージョンの NetApp SolidFire 製品および Element 製品に関するドキュメント"^]
 

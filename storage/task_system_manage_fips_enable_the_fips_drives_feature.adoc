@@ -24,6 +24,7 @@ GetFipsReport にすべてのノードの準備完了ステータスが表示さ
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * link:../api/index.html["Element API を使用してストレージを管理します"]

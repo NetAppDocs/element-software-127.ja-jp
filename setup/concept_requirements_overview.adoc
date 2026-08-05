@@ -20,6 +20,7 @@ summary: 作業を開始する前に、前提条件を確認する必要があ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

@@ -39,6 +39,7 @@ NOTE: 次の例に示すように、 IdP クラスタ管理者のユーザ名が
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

@@ -27,6 +27,7 @@ NOTE: ボリュームペアリングキーには、暗号化されたボリュ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_replication_pair_volumes_using_a_volume_id.adoc[ボリューム ID を使用してボリュームをペアリング]

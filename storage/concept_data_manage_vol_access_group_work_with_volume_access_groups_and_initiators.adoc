@@ -36,6 +36,7 @@ NOTE: ボリュームアクセスグループには次の制限があります�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_data_manage_vol_access_group_create_a_volume_access_group.adoc[ボリュームアクセスグループを作成します]

@@ -31,6 +31,7 @@ APIメソッドで作成されたペアリングキーを使用してxref:refere
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:reference_element_api_startclusterpairing.adoc[StartClusterPairing を参照してください]

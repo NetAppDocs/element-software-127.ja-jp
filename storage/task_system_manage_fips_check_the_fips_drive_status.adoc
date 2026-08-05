@@ -29,6 +29,7 @@ NetApp ElementソフトウェアAPIメソッドを使用すると、FIPSドラ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * link:../api/index.html["Element API を使用してストレージを管理します"]

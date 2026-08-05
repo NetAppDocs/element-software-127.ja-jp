@@ -35,6 +35,7 @@ NOTE: IPv4 アドレスと IPv6 アドレスの両方を使用できます。
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

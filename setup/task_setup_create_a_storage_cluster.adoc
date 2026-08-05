@@ -67,6 +67,7 @@ NOTE: ユーザ名とパスワードには、大文字と小文字のアルフ�
 
 
 
+[[for-more-information]]
 == 詳細情報
 
 * link:../api/index.html["Element API を使用してストレージを管理する"]

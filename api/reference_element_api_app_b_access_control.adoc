@@ -14,7 +14,11 @@ summary: Element API メソッドを使用できるかどうかは、設定す�
 Element API メソッドを使用できるかどうかは、設定するアクセスのタイプによって異なります。
 
 
+NOTE: APIを通じて利用できるアクセスタイプの中には、Element UIでは利用できないものがあります。
 
+
+
+[[accounts]]
 == アカウント
 
 accounts アクセスタイプで使用できるメソッドは次のとおりです。
@@ -58,12 +62,14 @@ RemoveAccount を使用します
 |===
 
 
+[[administrator]]
 == 管理者
 
 administrator アクセスタイプでは、すべてのメソッドを使用できます。
 
 
 
+[[clusteradmin]]
 == クラスタ管理者
 
 cluster admin アクセスタイプで使用できるメソッドは次のとおりです。
@@ -461,6 +467,7 @@ GetVirtualNetwork
 |===
 
 
+[[drives]]
 == ドライブ
 
 drives アクセスタイプで使用できるメソッドは次のとおりです。
@@ -489,6 +496,7 @@ SecureEraseDrives
 |===
 
 
+[[nodes]]
 == ノード
 
 nodes アクセスタイプで使用できるメソッドは次のとおりです。
@@ -517,6 +525,7 @@ RemoveNodes
 |===
 
 
+[[read]]
 == 読み取り
 
 read アクセスタイプで使用できるメソッドは次のとおりです。
@@ -660,6 +669,7 @@ ListBackupTargets を参照します
 |===
 
 
+[[reporting]]
 == レポート作成
 
 reporting アクセスタイプで使用できるメソッドは次のとおりです。
@@ -818,12 +828,14 @@ ListVolumeStatsByVolumeAccessGroup
 |===
 
 
+[[repositories]]
 == リポジトリ
 
 repositories アクセスタイプでは、 ListAllNodes メソッドを使用できます。
 
 
 
+[[volumes]]
 == ボリューム
 
 volumes アクセスタイプで使用できるメソッドは次のとおりです。
@@ -997,6 +1009,7 @@ UpdateBulkVolumeStatus
 |===
 
 
+[[write]]
 == 書き込み
 
 write アクセスタイプで使用できるメソッドは次のとおりです。
@@ -1108,3 +1121,5 @@ GetAsyncResult
 ドライブを削除
 
 |===
+.関連情報
+link:../storage/concept_system_manage_manage_cluster_administrator_users.html#view-cluster-admin-details["Element UI で利用可能なアクセスタイプについて説明します。"]

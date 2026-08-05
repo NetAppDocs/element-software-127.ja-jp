@@ -23,6 +23,7 @@ NetAppエンジニアリングでは、APIメソッドを使用して `GetRawSta
 
 
 
+[[new-since-version]]
 == 新規導入バージョン
 
 9.6

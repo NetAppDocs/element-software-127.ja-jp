@@ -68,6 +68,7 @@ summary: ノード API メソッドを使用すると、個々のノードを設
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

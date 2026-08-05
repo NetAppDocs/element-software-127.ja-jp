@@ -2807,7 +2807,6 @@
   <block id="954e95e0241c7b3a74f9c6a194795355" category="admonition">クラスタ上の保存データの暗号化または保存データのソフトウェア暗号化の現在のステータスを確認するには、を使用し<block ref="51ab6f075e7b9b2d3276f61c0b11b186" category="inline-link-macro-rx"></block>ます。を使用できます<block ref="2132cae62c1d77dfa3dd7c3447c77cf5" prefix=" " category="inline-code"></block> <block ref="e5fb14b37e1fdc8a835f7ed4e33c1c63" category="inline-link-macro-rx"></block>。</block>
   <block id="f706c2c9f764a1928af56503f593ce7c" category="inline-link-macro">新しいクラスタを作成します。</block>
   <block id="03c723d3c658548008f592aa302e8409" category="admonition">このメソッドを使用して保存データのソフトウェア暗号化を無効にすることはできません。保存データのソフトウェア暗号化を無効にするには、保存データのソフトウェア暗号化を無効にする必要があり<block ref="dd0348ec8bd8a2d5cdfad96177d0413b" category="inline-link-macro-rx"></block>ます。</block>
-  <block id="ed098de7c85d42c63667264da460dda3" category="list-text"><block ref="ed098de7c85d42c63667264da460dda3" category="inline-link-macro-rx"></block></block>
   <block id="41f5226364942217920c4da7dac4fdef" category="summary">DisableIdpAuthentication メソッドを使用して、クラスタにサードパーティの IdP を使用した認証のサポートを無効にできます。無効にすると、サードパーティの IdP によって認証されたユーザはクラスタにアクセスできなくなり、アクティブな認証済みセッションは無効になるか切断されます。LDAP 管理者およびクラスタ管理者は、サポートされている UI からクラスタにアクセスできます。</block>
   <block id="f7782cee0150831210cb8b1d663487e5" category="paragraph">メソッドを使用すると、クラスタでサードパーティIdPを使用する認証のサポートを無効にできます<block ref="19212cd9e0ef02383305a27bb4236251" prefix=" " category="inline-code"></block>。無効にすると、サードパーティの IdP によって認証されたユーザはクラスタにアクセスできなくなり、アクティブな認証済みセッションは無効になるか切断されます。LDAP 管理者およびクラスタ管理者は、サポートされている UI からクラスタにアクセスできます。</block>
   <block id="bfd29fa5d21f9a9583846d6e7975aa03" category="summary">DisableLdapAuthentication メソッドを使用すると、 LDAP 認証を無効にし、すべての LDAP 構成設定を削除できます。ユーザまたはグループに対する設定済みのクラスタ管理者アカウントは削除されません。LDAP 認証を無効にすると、 LDAP 認証を使用するように設定されているクラスタ管理者はクラスタにアクセスできなくなります。</block>
@@ -6146,7 +6145,6 @@
   <block id="feaf808951dafefbf9943700efdb4315" category="inline-link">以前のバージョン用の SolidFire および Element ソフトウェアドキュメントセンター</block>
   <block id="049adc1802f0210729234e1fe80d95e6" category="list-text"><block ref="049adc1802f0210729234e1fe80d95e6" category="inline-link-rx"></block></block>
   <block id="c93817bbfc3fab71f5f7ca740a11c847" category="inline-link">NetApp HCI のリソースページ</block>
-  <block id="bc218e71c18c2f809dffb10d3bc2a6e8" category="list-text"><block ref="bc218e71c18c2f809dffb10d3bc2a6e8" category="inline-link-rx"></block></block>
   <block id="b1eb510dd705c0d83386b5f196686d5a" category="inline-link-macro">SolidFire ストレージノードでサポートされるストレージファームウェアのバージョン</block>
   <block id="2b1ef5ee19eb343f5728f051c35efde4" category="list-text"><block ref="2b1ef5ee19eb343f5728f051c35efde4" category="inline-link-macro-rx"></block></block>
   <block id="a34166d7b2a72e36c4faae9587f3fe85" category="summary">システム上のストレージリソースを管理し、アクセスを提供するには、システムリソースのアカウントを設定する必要があります。</block>
@@ -8027,7 +8025,6 @@
   <block id="5c6c4538d95e26d538800e50027bee98" category="list-text">NTP構成ファイルを編集し<block ref="da6e8c31c4b01f79120fb363f8545fb0" prefix=" " category="inline-code"></block>ます。</block>
   <block id="89d9f3d393bbf8730274fc4a10310a89" category="list-text">各サーバの前に<block ref="35d864944e92fbca987e3924eee767fe" prefix="(" category="inline-code"></block>を追加して、デフォルトサーバをコメントアウトします<block ref="01abfc750a0c942167651c40d088531d" prefix=" " category="inline-code"></block>。</block>
   <block id="b74df8ed66dab15b4d425c5788286114" category="inline-link-macro">後の手順</block>
-  <block id="148f57c4f729acea3c3d95b35553a056" category="list-text">追加するデフォルトのタイムサーバごとに新しい行を追加します。デフォルトのタイムサーバは、で使用するストレージクラスタで使用されているNTPサーバと同じである必要があります<block ref="1d132a4516f2aafec8e6c256f33f26a5" category="inline-link-macro-rx"></block>。</block>
   <block id="79a26a29d17e6425a3d5b1deaf51ab27" category="list-text">完了したら構成ファイルを保存します。</block>
   <block id="47b45d19326795031f64b4a16a828d92" category="list-text">新しく追加したサーバと NTP 同期を強制します。</block>
   <block id="618bc09f6dd3ac7774f4a78b0820ef99" category="list-text">NTPD を再起動します。</block>
@@ -8037,8 +8034,6 @@
   <block id="28655cad1f55952f073e7a99ee4770e7" category="list-text">サービスの現在のステータスを表示して確認します。</block>
   <block id="5713fd020209c4c609f636c33df03095" category="list-text">vSphereで、VMオプションのチェックボックスがオフになっていることを確認し<block ref="31aa78e37f0aeb3e8c9c5025431be8f0" prefix=" " category="inline-code"></block>ます。</block>
   <block id="29c3f66306d4b9c80ad86deebb2fabcf" category="admonition">今後 VM を変更する場合は、このオプションを有効にしないでください。</block>
-  <block id="2d80cb22364fea2daaca797ae1d938cb" category="inline-link-macro">Setup コマンド</block>
-  <block id="a482c646f7f8199c69090c0d13cac33b" category="admonition">時刻の同期設定が完了したらNTPを編集しないでください。管理ノードでを実行するとNTPに影響するためです。<block ref="418ec8b5cff4068b256dfd7e9fc5ded7" category="inline-link-macro-rx"></block></block>
   <block id="ef246c91c687e7d720eb49c5e2a4cd47" category="section-title">手順4：管理ノードをセットアップする</block>
   <block id="9f150d20e38589485a1bb878b18c51e2" category="paragraph">コマンドを使用して管理ノードを設定し<block ref="73028873f2b0a018096b6a3d871634b5" prefix=" " category="inline-code"></block>ます。</block>
   <block id="5a808c62f4f9557c4df556d6a230ba7c" category="list-text">管理ノードのセットアップコマンドを設定して実行します。</block>
@@ -8047,7 +8042,6 @@
   <block id="fea104dd45bc0e75d821ddd5af2b02d0" category="admonition">内はコマンドの省略名で、正式な名前の代わりに使用できます。</block>
   <block id="3f124867257c579e7ba689baed3d4f45" category="list-text">* --mnode_admin_user （ -mu ） [username] * ：管理ノードの管理者アカウントのユーザ名。一般には、管理ノードへのログインに使用したユーザアカウントのユーザ名です。</block>
   <block id="4c7c8af8d2f636be58c2cffb73df599e" category="inline-link-macro">NTP サーバの設定</block>
-  <block id="26857b6da47c6d418e7795fa65480fb4" category="list-text">* --storage_mvip （ -SM ） [MVIP アドレス ] * ： Element ソフトウェアを実行しているストレージクラスタの管理仮想 IP アドレス（ MVIP ）。で使用したストレージクラスタを使用して管理ノードを設定し<block ref="5d58d27cc80ea9072f2b9ee8ac714542" category="inline-link-macro-rx"></block>ます。</block>
   <block id="4e1df484ad6625a5245817997c822b47" category="list-text">*--storage_username（-su）[username]*：パラメータで指定したクラスタのストレージクラスタ管理者のユーザ名<block ref="391c26f574aa116627e9ffa00caca891" prefix=" " category="inline-code"></block>。</block>
   <block id="d71eed1c64f0531e1c1642b076495af1" category="list-text">* --metal_active （ -t ） [true]* ： Active IQ による分析のためのデータ収集を有効にする値を true のままにします。</block>
   <block id="e4d37c44acea4cf6b1f090b66eb5cdb4" category="list-text">（オプション）： Active IQ エンドポイントのパラメータをコマンドに追加します。</block>
@@ -8352,7 +8346,6 @@
   <block id="177512b9add0b40c38dad61838bf7d79" category="section-title">資産管理</block>
   <block id="e578d1edd1f3c874d49e1c9e76becbbc" category="list-text"><block ref="e578d1edd1f3c874d49e1c9e76becbbc" category="inline-link-macro-rx"></block></block>
   <block id="6740b5cf3dc8479800bac9edc86cd31a" category="inline-link-macro">REST API を使用して Element システムログを収集します</block>
-  <block id="4fff24ec2d2b11f3a503f7b0abacb1cb" category="list-text"><block ref="4fff24ec2d2b11f3a503f7b0abacb1cb" category="inline-link-macro-rx"></block></block>
   <block id="c9676e9b030c94e7e828a060b343f3db" category="list-text"><block ref="c9676e9b030c94e7e828a060b343f3db" category="inline-link-macro-rx"></block></block>
   <block id="b8ce529cfc2b9255a783e211ddb57996" category="list-text"><block ref="b8ce529cfc2b9255a783e211ddb57996" category="inline-link-macro-rx"></block></block>
   <block id="9cce958dcc64c232fd2c1c35b2dadde7" category="list-text"><block ref="9cce958dcc64c232fd2c1c35b2dadde7" category="inline-link-macro-rx"></block></block>
@@ -8483,7 +8476,6 @@
   <block id="1c45fd215e6dc295350e4f4f5e2e7e41" category="list-text"><block ref="1c45fd215e6dc295350e4f4f5e2e7e41" category="inline-xref-macro-rx"></block></block>
   <block id="a8d3424ca67e2754569ae54982c009df" category="list-text"><block ref="a8d3424ca67e2754569ae54982c009df" category="inline-xref-macro-rx"></block></block>
   <block id="a2afe432d12965caf22f4ff7eb1b173e" category="inline-xref-macro">管理ノードをセットアップ</block>
-  <block id="f17bdc3100242be6aa20374cb07b1e01" category="list-text"><block ref="f17bdc3100242be6aa20374cb07b1e01" category="inline-xref-macro-rx"></block></block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="inline-xref-macro">次の手順</block>
   <block id="6b758c6baa8d819395041efcb30c549d" category="list-text"><block ref="6b758c6baa8d819395041efcb30c549d" category="inline-xref-macro-rx"></block></block>
   <block id="0263150036c1e3cfabff6bedf47d102e" category="summary">Element UI には、プライマリクラスタノードの管理仮想 IP アドレス（ MVIP ）を使用してアクセスできます。</block>
@@ -9820,7 +9812,6 @@
   <block id="2f00805e044ca70467775f06c1872f89" category="paragraph">LDAPサーバ</block>
   <block id="5483ab43104d3514dfdd7917f5a51b09" category="paragraph">389 TCP/UDP</block>
   <block id="19a0425f816e3267d5a9f5ee03f4fc4f" category="paragraph">（任意） LDAP 検索</block>
-  <block id="6ca93b96b4cd5e33a779ecc83fde0268" category="paragraph">Element ストレージファームウェアのアップグレード</block>
   <block id="5ee0194e49d16c87d081efc156fb0d74" category="paragraph">リモートストレージクラスタのMVIP</block>
   <block id="75a4d5a956df2844befb13a89867e179" category="paragraph">リモートレプリケーションのクラスタペアリング通信</block>
   <block id="e902ca26db3b32a7d466ef307db87d60" category="paragraph">リモートストレージノードのMIP</block>
@@ -10455,7 +10446,6 @@
   <block id="23fd7202fd22f55991e760ad0c321e8c" category="list-text">クラスタ内の各ノードに対してプロトコルエンドポイントが作成されていることを確認します。</block>
   <block id="856c3e7758eb11b79c64f0354ae8b417" category="admonition">vSphere で追加の設定が必要です。vCenter への VASA Provider の登録、 VVol データストアの作成と管理、およびポリシーに基づくストレージの管理を行うには、 VMware vSphere Virtual Volumes for SolidFire ストレージ構成ガイドを参照してください。</block>
   <block id="ef9f3ff37cf3150278a11138bf61416f" category="inline-link">VMware vSphere Virtual Volumes for SolidFire Storage Configuration Guide</block>
-  <block id="3d08f19c985682eb2a632e36184cedd2" category="paragraph"><block ref="3d08f19c985682eb2a632e36184cedd2" category="inline-link-rx"></block></block>
   <block id="a25585714577ecf53e74bf6ba927939b" category="summary">Element UI では、クラスタ上のすべてのアクティブな仮想ボリュームに関する情報を確認できます。入力、出力、スループット、レイテンシなど、各仮想ボリュームのパフォーマンスアクティビティを表示することもできます。 キュー深度とボリューム情報。</block>
   <block id="bb0b3ec1fbf17c782efc2b196ad33dd2" category="list-text">クラスタの Element UI で VVol 機能を有効にしておく必要があります。</block>
   <block id="bb4ae57cfc1de5cb77443f3b073ffc7f" category="list-text">関連付けられたストレージコンテナを作成しておく必要があります。</block>
@@ -11389,9 +11379,7 @@
   <block id="248c4c4df12448050266854cd21cd105" category="paragraph"><block ref="248c4c4df12448050266854cd21cd105" category="inline-link-rx"></block></block>
   <block id="02917d00c6e974040b113eec406f933d" category="paragraph">NetApp Element ソフトウェアを実行するシステムでは、 NetApp ONTAP システムとの間での SnapMirror 機能を使用した Snapshot コピーのコピーとリストアがサポートされます。このテクノロジを使用する主な理由は、 NetApp HCI から ONTAP へのディザスタリカバリです。エンドポイントには、 ONTAP 、 ONTAP Select 、 Cloud Volumes ONTAP があります。TR-4641 ：『 NetApp HCI Data Protection 』を参照してください。</block>
   <block id="37a9cf4fd8039696452f63fb22f06182" category="inline-link">NetAppテクニカルレポート4641：『NetApp HCIデータ保護』</block>
-  <block id="b456d131470ee117b6ff900f949b80c5" category="paragraph"><block ref="b456d131470ee117b6ff900f949b80c5" category="inline-link-rx"></block></block>
   <block id="0ae5c767cabcaa90f5848cabc66f8aa9" category="inline-link">NetApp HCI 、 ONTAP 、コンバージドインフラでデータファブリックを構築できます</block>
-  <block id="1791fd435a83f3ee701165e29bb05b2f" category="list-text"><block ref="1791fd435a83f3ee701165e29bb05b2f" category="inline-link-rx"></block></block>
   <block id="15fdfbff97a006d7f8dd45be7301f5f3" category="list-text"><block ref="15fdfbff97a006d7f8dd45be7301f5f3" category="inline-link-macro-rx"></block></block>
   <block id="8cb89b387c0217f2060ca414b41c63b2" category="summary">SolidFire クラスタでは、ソフトウェアベースまたはハードウェアベースの保存データ暗号化を使用して、クラスタに格納されているすべてのデータを暗号化できます。</block>
   <block id="07134dd620fa410023548b639cca1e69" category="doc">クラスタの保存データの暗号化を有効または無効にします</block>
@@ -12302,4 +12290,19 @@
   <block id="055c37e82a2e8b5a5c2d073fe46d98bb" category="list-text"><block ref="055c37e82a2e8b5a5c2d073fe46d98bb" category="inline-link-macro-rx"></block></block>
   <block id="c31ff914893a6941b1e7621565be0d0c" category="list-text"><block ref="c31ff914893a6941b1e7621565be0d0c" category="inline-link-macro-rx"></block></block>
   <block id="fe3c28c386d2be6c3cbda4b2feb01c29" category="list-text"><block ref="e8348e5b207b91893f9322900bc614aa" category="inline-link-rx"></block>.</block>
+  <block id="cedd3b982f345250c95c539d68542a1c" category="admonition">APIを通じて利用できるアクセスタイプの中には、Element UIでは利用できないものがあります。</block>
+  <block id="66ae9524f9c214ce3d4ddc510dc6384a" category="inline-link-macro">Element UI で利用可能なアクセスタイプについて説明します。</block>
+  <block id="e3ae42684db77c59ef80c04aae526de5" category="paragraph"><block ref="e3ae42684db77c59ef80c04aae526de5" category="inline-link-macro-rx"></block></block>
+  <block id="c884c7877fc5d6cf0d734c5cb19d24ad" category="list-text"><block ref="c884c7877fc5d6cf0d734c5cb19d24ad" category="inline-link-rx"></block></block>
+  <block id="b2670dc806bd6104f3f14ade84d2dee2" category="list-text">追加するデフォルトタイムサーバーごとに新しい行を追加してください。デフォルトタイムサーバーは、<block ref="7ae058b40dffa4b76fb639a1f356f82d" category="inline-xref-macro-rx"></block>で使用するストレージクラスターで使用されるNTPサーバーと同じである必要があります。</block>
+  <block id="50ea53794e654f327db1fc603693d522" category="list-text">*--storage_mvip (-sm) [MVIPアドレス]*：Elementソフトウェアを実行しているストレージクラスタの管理仮想IPアドレス（MVIP）。管理ノードを、<block ref="27a45bb138de34c76f63ba91c24ab011" category="inline-link-macro-rx"></block>で使用したストレージクラスタと同じ構成にします。</block>
+  <block id="a3c8c321729d4358025f5afa4118d23c" category="list-text">[[step_6_recover_mnode_redeploy]]</block>
+  <block id="8c7d040a87c37f1f3051f72abbfbcbc5" category="list-text"><block ref="8c7d040a87c37f1f3051f72abbfbcbc5" category="inline-link-macro-rx"></block></block>
+  <block id="b254c421d245be4ca380ce1a75b8ed59" category="list-text"><block ref="b254c421d245be4ca380ce1a75b8ed59" category="inline-xref-macro-rx"></block></block>
+  <block id="f72c81a1158d9efb9bad238e3c497a6c" category="inline-link-macro">Element API で利用可能なアクセスタイプについて説明します。</block>
+  <block id="c858f3d30df8c552799df529153c0e44" category="list-text"><block ref="c858f3d30df8c552799df529153c0e44" category="inline-link-macro-rx"></block></block>
+  <block id="bd000e3a7a010d55765a9684adc1c25f" category="paragraph">要素ストレージのアップグレード</block>
+  <block id="161b4ed96d634114cd790ffb7038cc24" category="paragraph"><block ref="161b4ed96d634114cd790ffb7038cc24" category="inline-link-rx"></block></block>
+  <block id="c28c56f7a7ce8d5595899ccc3950cb6d" category="paragraph"><block ref="c28c56f7a7ce8d5595899ccc3950cb6d" category="inline-link-rx"></block></block>
+  <block id="145012f945e6ea9359e0b746c1a4925a" category="list-text"><block ref="145012f945e6ea9359e0b746c1a4925a" category="inline-link-rx"></block></block>
 </blocks>

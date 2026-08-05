@@ -15,6 +15,7 @@ SolidFire ストレージシステムのクラスタ管理者アカウントの�
 
 
 
+[[storage-cluster-administrator-account-types]]
 == ストレージクラスタ管理者アカウントのタイプ
 
 NetApp Element ソフトウェアを実行するストレージクラスタには、プライマリクラスタ管理者アカウントとクラスタ管理者アカウントの 2 種類の管理者アカウントがあります。
@@ -34,6 +35,7 @@ NOTE: ノード UI からクラスタ内のアクティブノードにアクセ�
 
 
 
+[[view-cluster-admin-details]]
 == クラスタ管理者の詳細を表示
 
 . クラスタ全体（ LDAP 以外）のクラスタ管理者アカウントを作成するには、次の操作を実行します。
@@ -61,9 +63,13 @@ NOTE: ノード UI からクラスタ内のアクティブノードにアクセ�
 
 
 +
+[NOTE]
+====
+administrator アクセスタイプには、すべての権限が割り当てられています。
 
-NOTE: administrator アクセスタイプには、すべての権限が割り当てられています。
+APIを通じて利用できるアクセスタイプの中には、Element UIでは利用できないものがあります。
 
+====
 +
 ** * タイプ * ：クラスタ管理者のタイプ。有効な値：
 +
@@ -81,6 +87,8 @@ NOTE: administrator アクセスタイプには、すべての権限が割り当
 
 
 
+[[create-a-cluster-administrator-account]]
+[[create_cluster_admin_account]]
 == クラスタ管理者アカウントを作成
 
 新しいクラスタ管理者アカウントを作成し、ストレージシステムの特定の領域へのアクセスを許可または制限する権限を付与できます。クラスタ管理者アカウントの権限を設定すると、割り当てていない権限については読み取り専用権限が付与されます。
@@ -128,6 +136,7 @@ LDAP クラスタ管理者ユーザまたはグループを追加する場合、
 
 
 
+[[edit-cluster-administrator-permissions]]
 == クラスタ管理者の権限を編集します
 
 レポート作成、ノード、ドライブ、ボリューム、アカウント用のクラスタ管理者アカウントの権限を変更できます。 クラスタレベルのアクセスとアクセス許可を有効にすると、そのレベルの書き込みアクセスが割り当てられます。選択しなかったレベルについては、読み取り専用アクセスが付与されます。
@@ -141,6 +150,7 @@ LDAP クラスタ管理者ユーザまたはグループを追加する場合、
 
 
 
+[[change-passwords-for-cluster-administrator-accounts]]
 == クラスタ管理者アカウントのパスワードを変更します
 
 Element UI を使用してクラスタ管理者のパスワードを変更できます。
@@ -152,12 +162,9 @@ Element UI を使用してクラスタ管理者のパスワードを変更でき
 . [ 変更の保存 *] をクリックします。
 
 
-
-
-== 詳細情報
-
+.関連情報
+* link:../api/reference_element_api_app_b_access_control.html["Element API で利用可能なアクセスタイプについて説明します。"]
 * link:task_system_manage_enable_ldap_authentication.html["Element ユーザインターフェイスで LDAP 認証を有効にします"]
 * link:concept_system_manage_manage_ldap.html["LDAPを無効にする"]
-* https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]
 * https://docs.netapp.com/us-en/vcp/index.html["vCenter Server 向け NetApp Element プラグイン"^]
 

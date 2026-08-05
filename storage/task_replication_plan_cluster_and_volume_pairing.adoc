@@ -26,6 +26,7 @@ NOTE: NetAppでは、データのレプリケーション時にWANアクセラ�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_replication_pair_clusters.adoc[レプリケーション用にクラスタをペアリング]

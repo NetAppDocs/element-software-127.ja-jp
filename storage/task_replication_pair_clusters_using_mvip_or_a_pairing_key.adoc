@@ -23,6 +23,7 @@ summary: 両方のクラスタにクラスタ管理者としてアクセスで�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * xref:task_replication_pair_cluster_using_mvip.adoc[MVIP を使用してクラスタをペアリング]

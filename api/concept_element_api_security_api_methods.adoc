@@ -35,6 +35,7 @@ Element ソフトウェアは、外部キー管理サーバなどの外部セキ
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

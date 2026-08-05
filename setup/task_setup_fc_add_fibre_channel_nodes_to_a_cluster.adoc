@@ -36,6 +36,7 @@ NOTE: 追加するノードの Element のバージョンがクラスタで実�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * https://docs.netapp.com/us-en/element-software/index.html["SolidFire および Element ソフトウェアのドキュメント"]

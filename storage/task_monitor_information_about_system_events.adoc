@@ -83,6 +83,7 @@ API イベントやクローンイベントなど、記録されるイベント�
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 xref:reference_monitor_event_types.adoc[イベントタイプ]

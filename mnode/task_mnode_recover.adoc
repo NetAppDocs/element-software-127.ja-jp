@@ -56,6 +56,7 @@ keywords: netapp, element, management node, mnode, disaster recovery, redeploy, 
 
 
 
+[[download-iso-or-ova-and-deploy-the-vm]]
 == ISO または OVA をダウンロードし、 VM を導入します
 
 . NetAppサポートサイトのページから、インストールに対応したOVAまたはISOをダウンロードし https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab["Element ソフトウェア"^]ます。
@@ -97,6 +98,7 @@ NOTE: イメージを使用して管理ノードをインストールすると�
 
 
 
+[[configure-the-network]]
 == ネットワークを設定します
 
 . ターミナルユーザインターフェイス（ TUI ）を使用して、管理ノードの管理ユーザを作成します。
@@ -113,6 +115,7 @@ NOTE: ストレージトラフィックを分離するために追加のNICが�
 
 
 
+[[configure-time-sync]]
 == 時刻同期を設定します
 
 . NTP を使用して管理ノードとストレージクラスタの間で時刻が同期されていることを確認します。
@@ -190,6 +193,7 @@ NOTE: 時刻の同期設定が完了したらNTPを編集しないでくださ�
 
 
 
+[[configure-the-management-node]]
 == 管理ノードを設定
 
 . 管理サービスバンドルの内容を保存する一時的なデスティネーションディレクトリを作成します。
@@ -224,6 +228,7 @@ echo '{"trident": true, "mvip": "[mvip IP address]", "account_name": "[persisten
 *** * [persistent volume account name] * ：このストレージクラスタ内のすべての永続ボリュームに関連付けられたアカウントの名前。
 
 
+.. [[step_6_recover_mnode_redeploy]]
 
 
 . クラスタでホストされている永続ボリュームに接続し、以前の管理ノードの設定データを使用してサービスを開始するには、管理ノードの再導入コマンドを設定して実行します。

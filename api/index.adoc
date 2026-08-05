@@ -44,6 +44,7 @@ Element API は、 HTTPS 経由の JSON-RPC プロトコルに基づいていま
 
 
 
+[[find-more-information]]
 == 詳細情報
 
 * http://docs.netapp.com/sfe-122/index.jsp["SolidFire と Element ソフトウェアドキュメントセンター"^]
